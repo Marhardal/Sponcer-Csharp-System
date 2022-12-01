@@ -139,6 +139,7 @@
             this.Settingsbtn.TabIndex = 1;
             this.Settingsbtn.Text = "Settings";
             this.Settingsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Settingsbtn.Click += new System.EventHandler(this.Settingsbtn_Click);
             // 
             // Studentbtn
             // 
@@ -163,6 +164,7 @@
             this.Studentbtn.TabIndex = 1;
             this.Studentbtn.Text = "Student";
             this.Studentbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Studentbtn.Click += new System.EventHandler(this.Studentbtn_Click);
             // 
             // Classbtn
             // 
@@ -187,6 +189,7 @@
             this.Classbtn.TabIndex = 1;
             this.Classbtn.Text = "Class";
             this.Classbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Classbtn.Click += new System.EventHandler(this.Classbtn_Click);
             // 
             // Schoolbtn
             // 
@@ -211,6 +214,7 @@
             this.Schoolbtn.TabIndex = 1;
             this.Schoolbtn.Text = "Schools";
             this.Schoolbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Schoolbtn.Click += new System.EventHandler(this.Schoolbtn_Click);
             // 
             // Sponcerbtn
             // 
@@ -235,6 +239,7 @@
             this.Sponcerbtn.TabIndex = 1;
             this.Sponcerbtn.Text = "Sponcer";
             this.Sponcerbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Sponcerbtn.Click += new System.EventHandler(this.Sponcerbtn_Click);
             // 
             // Homebtn
             // 
@@ -259,6 +264,7 @@
             this.Homebtn.TabIndex = 1;
             this.Homebtn.Text = "Home";
             this.Homebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Homebtn.Click += new System.EventHandler(this.Homebtn_Click);
             // 
             // gunaCirclePictureBox1
             // 
@@ -278,7 +284,7 @@
             this.gunaCirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaCirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox2.Image")));
-            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(1224, 5);
+            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(1223, 5);
             this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
             this.gunaCirclePictureBox2.Size = new System.Drawing.Size(96, 88);
             this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -301,7 +307,7 @@
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(624, 36);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(559, 36);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(245, 41);
             this.bunifuCustomLabel2.TabIndex = 3;

@@ -17,5 +17,34 @@ namespace Sponcer_Csharp_System
             InitializeComponent();
         }
 
+        private void Homebtn_Click(object sender, EventArgs e)
+        {
+            Pages.SetPage("Home");
+        }
+
+        private void Sponcerbtn_Click(object sender, EventArgs e)
+        {
+            Pages.SetPage("Sponcer");
+        }
+
+        private void Schoolbtn_Click(object sender, EventArgs e)
+        {
+            Pages.SetPage("School");
+        }
+
+        private void Classbtn_Click(object sender, EventArgs e)
+        {
+            Pages.SetPage("Class");
+        }
+
+        private void Studentbtn_Click(object sender, EventArgs e)
+        {
+            Pages.SetPage("Students");
+        }
+
+        private void Settingsbtn_Click(object sender, EventArgs e)
+        {
+            Pages.SetPage("Settings");
+        }
     }
 }
