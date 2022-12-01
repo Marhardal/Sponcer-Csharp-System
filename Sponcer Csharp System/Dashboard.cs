@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sponcer_Csharp_System
 {
-    public partial class Form1 : Form
+    public partial class Dashboard : Form
     {
-        public Form1()
+        public Dashboard()
         {
             InitializeComponent();
         }
@@ -73,6 +73,35 @@ namespace Sponcer_Csharp_System
         private void Sponcerpribtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void studentinsbtn_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Sponcerinsbtn_Click(object sender, EventArgs e)
+        {
+            Upsert upsert = new Upsert();
+            Sponcer sponcer = new Sponcer();
+            sponcer.Location = new Point(0, 170);
+            sponcer.Insertbtn.BringToFront();
+            sponcer.bunifuCustomLabel1.Text = "Enter Sponser";
+            sponcer.bunifuCustomLabel2.Text = "Enter Spocer Name";
+            upsert.Controls.Add(sponcer);
+            upsert.Show();
+        }
+
+        private void Sponcerupdbtn_Click(object sender, EventArgs e)
+        {
+            Upsert upsert = new Upsert();
+            Sponcer sponcer = new Sponcer();
+            sponcer.Location = new Point(0, 170);
+            sponcer.Updatebtn.BringToFront();
+            sponcer.bunifuCustomLabel1.Text = "Update Sponser";
+            sponcer.bunifuCustomLabel2.Text = "Update Spocer Name";
+            upsert.Controls.Add(sponcer);
+            upsert.Show();
         }
     }
 }

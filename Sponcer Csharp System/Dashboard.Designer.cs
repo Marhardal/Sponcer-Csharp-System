@@ -1,6 +1,6 @@
 ﻿namespace Sponcer_Csharp_System
 {
-    partial class Form1
+    partial class Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,6 +39,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.Image = new Guna.UI.WinForms.GunaPictureBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.headinglbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Settingsbtn = new Guna.UI.WinForms.GunaButton();
@@ -83,8 +84,8 @@
             this.Studentupdbtn = new Guna.UI.WinForms.GunaButton();
             this.studentinsbtn = new Guna.UI.WinForms.GunaButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.Image = new Guna.UI.WinForms.GunaPictureBox();
             this.bunifuGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Image)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -97,7 +98,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Classdgv)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Image)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel2
@@ -122,6 +122,18 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(1332, 127);
             this.bunifuGradientPanel2.TabIndex = 1;
+            // 
+            // Image
+            // 
+            this.Image.BackColor = System.Drawing.Color.Transparent;
+            this.Image.BaseColor = System.Drawing.Color.Transparent;
+            this.Image.Image = ((System.Drawing.Image)(resources.GetObject("Image.Image")));
+            this.Image.Location = new System.Drawing.Point(19, 58);
+            this.Image.Name = "Image";
+            this.Image.Size = new System.Drawing.Size(68, 66);
+            this.Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Image.TabIndex = 7;
+            this.Image.TabStop = false;
             // 
             // bunifuCustomLabel3
             // 
@@ -377,10 +389,10 @@
             this.Studentdgv.Location = new System.Drawing.Point(0, 258);
             this.Studentdgv.Multiline = true;
             this.Studentdgv.Name = "Studentdgv";
-            this.Studentdgv.Page = this.tabPage5;
-            this.Studentdgv.PageIndex = 4;
-            this.Studentdgv.PageName = "tabPage5";
-            this.Studentdgv.PageTitle = "Student";
+            this.Studentdgv.Page = this.tabPage2;
+            this.Studentdgv.PageIndex = 1;
+            this.Studentdgv.PageName = "tabPage2";
+            this.Studentdgv.PageTitle = "Sponcer";
             this.Studentdgv.SelectedIndex = 0;
             this.Studentdgv.Size = new System.Drawing.Size(1332, 535);
             this.Studentdgv.TabIndex = 2;
@@ -407,7 +419,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1324, 503);
+            this.tabPage1.Size = new System.Drawing.Size(1324, 506);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -423,7 +435,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1324, 503);
+            this.tabPage2.Size = new System.Drawing.Size(1324, 506);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sponcer";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -553,6 +565,7 @@
             this.Sponcerupdbtn.TabIndex = 7;
             this.Sponcerupdbtn.Text = "Update";
             this.Sponcerupdbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Sponcerupdbtn.Click += new System.EventHandler(this.Sponcerupdbtn_Click);
             // 
             // Sponcerinsbtn
             // 
@@ -577,6 +590,7 @@
             this.Sponcerinsbtn.TabIndex = 8;
             this.Sponcerinsbtn.Text = "Insert";
             this.Sponcerinsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Sponcerinsbtn.Click += new System.EventHandler(this.Sponcerinsbtn_Click);
             // 
             // tabPage3
             // 
@@ -588,7 +602,7 @@
             this.tabPage3.Controls.Add(this.Schoolinsbtn);
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1324, 503);
+            this.tabPage3.Size = new System.Drawing.Size(1324, 506);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Schools";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -751,7 +765,7 @@
             this.tabPage4.Controls.Add(this.Classinsbtn);
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1324, 503);
+            this.tabPage4.Size = new System.Drawing.Size(1324, 506);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Class";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1066,29 +1080,18 @@
             this.studentinsbtn.TabIndex = 14;
             this.studentinsbtn.Text = "Insert";
             this.studentinsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.studentinsbtn.Click += new System.EventHandler(this.studentinsbtn_Click);
             // 
             // tabPage6
             // 
             this.tabPage6.Location = new System.Drawing.Point(4, 4);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1324, 503);
+            this.tabPage6.Size = new System.Drawing.Size(1324, 506);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Settings";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // Image
-            // 
-            this.Image.BackColor = System.Drawing.Color.Transparent;
-            this.Image.BaseColor = System.Drawing.Color.Transparent;
-            this.Image.Image = ((System.Drawing.Image)(resources.GetObject("Image.Image")));
-            this.Image.Location = new System.Drawing.Point(19, 58);
-            this.Image.Name = "Image";
-            this.Image.Size = new System.Drawing.Size(68, 66);
-            this.Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.Image.TabIndex = 7;
-            this.Image.TabStop = false;
-            // 
-            // Form1
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1098,11 +1101,12 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sponcer";
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
@@ -1116,7 +1120,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Classdgv)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Image)).EndInit();
             this.ResumeLayout(false);
 
         }
