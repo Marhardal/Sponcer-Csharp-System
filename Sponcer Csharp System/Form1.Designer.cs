@@ -39,8 +39,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.headinglbl = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.Settingsbtn = new Guna.UI.WinForms.GunaButton();
             this.Studentbtn = new Guna.UI.WinForms.GunaButton();
             this.Classbtn = new Guna.UI.WinForms.GunaButton();
@@ -55,58 +55,58 @@
             this.Studentdgv = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.Sponcerdgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Sponcerrefrbtn = new Guna.UI.WinForms.GunaButton();
+            this.Sponcerpribtn = new Guna.UI.WinForms.GunaButton();
             this.Sponcerdelbtn = new Guna.UI.WinForms.GunaButton();
+            this.Sponcerdgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Sponcerupdbtn = new Guna.UI.WinForms.GunaButton();
             this.Sponcerinsbtn = new Guna.UI.WinForms.GunaButton();
-            this.Sponcerpribtn = new Guna.UI.WinForms.GunaButton();
-            this.Sponcerrefrbtn = new Guna.UI.WinForms.GunaButton();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.Schoolrefreshbtn = new Guna.UI.WinForms.GunaButton();
             this.Schoolpribtn = new Guna.UI.WinForms.GunaButton();
             this.Schooldelbtn = new Guna.UI.WinForms.GunaButton();
             this.Schooldgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Schoolupdbtn = new Guna.UI.WinForms.GunaButton();
             this.Schoolinsbtn = new Guna.UI.WinForms.GunaButton();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.Classrefreshbtn = new Guna.UI.WinForms.GunaButton();
             this.Classpribtn = new Guna.UI.WinForms.GunaButton();
             this.Classdelbtn = new Guna.UI.WinForms.GunaButton();
             this.Classdgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Classupdbtn = new Guna.UI.WinForms.GunaButton();
             this.Classinsbtn = new Guna.UI.WinForms.GunaButton();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.Studentrefreshbtn = new Guna.UI.WinForms.GunaButton();
             this.Studentpribtn = new Guna.UI.WinForms.GunaButton();
             this.Studentdelbtn = new Guna.UI.WinForms.GunaButton();
             this.bunifuCustomDataGrid4 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Studentupdbtn = new Guna.UI.WinForms.GunaButton();
             this.studentinsbtn = new Guna.UI.WinForms.GunaButton();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.Image = new Guna.UI.WinForms.GunaPictureBox();
             this.bunifuGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.Studentdgv.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Sponcerdgv)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Schooldgv)).BeginInit();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Classdgv)).BeginInit();
+            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel2
             // 
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.Image);
             this.bunifuGradientPanel2.Controls.Add(this.bunifuCustomLabel3);
             this.bunifuGradientPanel2.Controls.Add(this.headinglbl);
-            this.bunifuGradientPanel2.Controls.Add(this.gunaPictureBox1);
             this.bunifuGradientPanel2.Controls.Add(this.Settingsbtn);
             this.bunifuGradientPanel2.Controls.Add(this.Studentbtn);
             this.bunifuGradientPanel2.Controls.Add(this.Classbtn);
@@ -117,32 +117,35 @@
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.DarkOliveGreen;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.DarkOliveGreen;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.DarkOliveGreen;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 128);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 127);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(1332, 127);
             this.bunifuGradientPanel2.TabIndex = 1;
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(1068, 73);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(252, 31);
+            this.bunifuCustomLabel3.TabIndex = 6;
+            this.bunifuCustomLabel3.Text = "Sponcer System\\Home";
             // 
             // headinglbl
             // 
             this.headinglbl.AutoSize = true;
             this.headinglbl.BackColor = System.Drawing.Color.Transparent;
             this.headinglbl.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headinglbl.ForeColor = System.Drawing.Color.Black;
+            this.headinglbl.ForeColor = System.Drawing.Color.White;
             this.headinglbl.Location = new System.Drawing.Point(94, 73);
             this.headinglbl.Name = "headinglbl";
             this.headinglbl.Size = new System.Drawing.Size(252, 31);
             this.headinglbl.TabIndex = 5;
             this.headinglbl.Text = "Sponcer System\\Home";
-            // 
-            // gunaPictureBox1
-            // 
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(21, 61);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(58, 55);
-            this.gunaPictureBox1.TabIndex = 2;
-            this.gunaPictureBox1.TabStop = false;
             // 
             // Settingsbtn
             // 
@@ -371,7 +374,7 @@
             this.Studentdgv.Controls.Add(this.tabPage5);
             this.Studentdgv.Controls.Add(this.tabPage6);
             this.Studentdgv.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Studentdgv.Location = new System.Drawing.Point(0, 261);
+            this.Studentdgv.Location = new System.Drawing.Point(0, 258);
             this.Studentdgv.Multiline = true;
             this.Studentdgv.Name = "Studentdgv";
             this.Studentdgv.Page = this.tabPage5;
@@ -379,7 +382,7 @@
             this.Studentdgv.PageName = "tabPage5";
             this.Studentdgv.PageTitle = "Student";
             this.Studentdgv.SelectedIndex = 0;
-            this.Studentdgv.Size = new System.Drawing.Size(1332, 532);
+            this.Studentdgv.Size = new System.Drawing.Size(1332, 535);
             this.Studentdgv.TabIndex = 2;
             animation1.AnimateOnlyDifferences = false;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -425,59 +428,79 @@
             this.tabPage2.Text = "Sponcer";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // Sponcerrefrbtn
             // 
-            this.tabPage3.Controls.Add(this.Schoolrefreshbtn);
-            this.tabPage3.Controls.Add(this.Schoolpribtn);
-            this.tabPage3.Controls.Add(this.Schooldelbtn);
-            this.tabPage3.Controls.Add(this.Schooldgv);
-            this.tabPage3.Controls.Add(this.Schoolupdbtn);
-            this.tabPage3.Controls.Add(this.Schoolinsbtn);
-            this.tabPage3.Location = new System.Drawing.Point(4, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1324, 503);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Schools";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.Sponcerrefrbtn.AnimationHoverSpeed = 0.07F;
+            this.Sponcerrefrbtn.AnimationSpeed = 0.03F;
+            this.Sponcerrefrbtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.Sponcerrefrbtn.BorderColor = System.Drawing.Color.Black;
+            this.Sponcerrefrbtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Sponcerrefrbtn.FocusedColor = System.Drawing.Color.Empty;
+            this.Sponcerrefrbtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sponcerrefrbtn.ForeColor = System.Drawing.Color.White;
+            this.Sponcerrefrbtn.Image = ((System.Drawing.Image)(resources.GetObject("Sponcerrefrbtn.Image")));
+            this.Sponcerrefrbtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.Sponcerrefrbtn.Location = new System.Drawing.Point(674, 6);
+            this.Sponcerrefrbtn.Name = "Sponcerrefrbtn";
+            this.Sponcerrefrbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.Sponcerrefrbtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.Sponcerrefrbtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.Sponcerrefrbtn.OnHoverImage = null;
+            this.Sponcerrefrbtn.OnPressedColor = System.Drawing.Color.Black;
+            this.Sponcerrefrbtn.Size = new System.Drawing.Size(160, 42);
+            this.Sponcerrefrbtn.TabIndex = 10;
+            this.Sponcerrefrbtn.Text = "Refresh";
+            this.Sponcerrefrbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Sponcerrefrbtn.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
-            // tabPage4
+            // Sponcerpribtn
             // 
-            this.tabPage4.Controls.Add(this.Classrefreshbtn);
-            this.tabPage4.Controls.Add(this.Classpribtn);
-            this.tabPage4.Controls.Add(this.Classdelbtn);
-            this.tabPage4.Controls.Add(this.Classdgv);
-            this.tabPage4.Controls.Add(this.Classupdbtn);
-            this.tabPage4.Controls.Add(this.Classinsbtn);
-            this.tabPage4.Location = new System.Drawing.Point(4, 4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1324, 503);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Class";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.Sponcerpribtn.AnimationHoverSpeed = 0.07F;
+            this.Sponcerpribtn.AnimationSpeed = 0.03F;
+            this.Sponcerpribtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.Sponcerpribtn.BorderColor = System.Drawing.Color.Black;
+            this.Sponcerpribtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Sponcerpribtn.FocusedColor = System.Drawing.Color.Empty;
+            this.Sponcerpribtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sponcerpribtn.ForeColor = System.Drawing.Color.White;
+            this.Sponcerpribtn.Image = ((System.Drawing.Image)(resources.GetObject("Sponcerpribtn.Image")));
+            this.Sponcerpribtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.Sponcerpribtn.Location = new System.Drawing.Point(508, 6);
+            this.Sponcerpribtn.Name = "Sponcerpribtn";
+            this.Sponcerpribtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.Sponcerpribtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.Sponcerpribtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.Sponcerpribtn.OnHoverImage = null;
+            this.Sponcerpribtn.OnPressedColor = System.Drawing.Color.Black;
+            this.Sponcerpribtn.Size = new System.Drawing.Size(160, 42);
+            this.Sponcerpribtn.TabIndex = 9;
+            this.Sponcerpribtn.Text = "Print";
+            this.Sponcerpribtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Sponcerpribtn.Click += new System.EventHandler(this.Sponcerpribtn_Click);
             // 
-            // tabPage5
+            // Sponcerdelbtn
             // 
-            this.tabPage5.Controls.Add(this.Studentrefreshbtn);
-            this.tabPage5.Controls.Add(this.Studentpribtn);
-            this.tabPage5.Controls.Add(this.Studentdelbtn);
-            this.tabPage5.Controls.Add(this.bunifuCustomDataGrid4);
-            this.tabPage5.Controls.Add(this.Studentupdbtn);
-            this.tabPage5.Controls.Add(this.studentinsbtn);
-            this.tabPage5.Location = new System.Drawing.Point(4, 4);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1324, 503);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Student";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 4);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1324, 503);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Settings";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.Sponcerdelbtn.AnimationHoverSpeed = 0.07F;
+            this.Sponcerdelbtn.AnimationSpeed = 0.03F;
+            this.Sponcerdelbtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.Sponcerdelbtn.BorderColor = System.Drawing.Color.Black;
+            this.Sponcerdelbtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Sponcerdelbtn.FocusedColor = System.Drawing.Color.Empty;
+            this.Sponcerdelbtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sponcerdelbtn.ForeColor = System.Drawing.Color.White;
+            this.Sponcerdelbtn.Image = ((System.Drawing.Image)(resources.GetObject("Sponcerdelbtn.Image")));
+            this.Sponcerdelbtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.Sponcerdelbtn.Location = new System.Drawing.Point(342, 6);
+            this.Sponcerdelbtn.Name = "Sponcerdelbtn";
+            this.Sponcerdelbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.Sponcerdelbtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.Sponcerdelbtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.Sponcerdelbtn.OnHoverImage = null;
+            this.Sponcerdelbtn.OnPressedColor = System.Drawing.Color.Black;
+            this.Sponcerdelbtn.Size = new System.Drawing.Size(160, 42);
+            this.Sponcerdelbtn.TabIndex = 6;
+            this.Sponcerdelbtn.Text = "Delete";
+            this.Sponcerdelbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Sponcerdgv
             // 
@@ -506,30 +529,6 @@
             this.Sponcerdgv.RowTemplate.Height = 24;
             this.Sponcerdgv.Size = new System.Drawing.Size(1307, 462);
             this.Sponcerdgv.TabIndex = 0;
-            // 
-            // Sponcerdelbtn
-            // 
-            this.Sponcerdelbtn.AnimationHoverSpeed = 0.07F;
-            this.Sponcerdelbtn.AnimationSpeed = 0.03F;
-            this.Sponcerdelbtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.Sponcerdelbtn.BorderColor = System.Drawing.Color.Black;
-            this.Sponcerdelbtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.Sponcerdelbtn.FocusedColor = System.Drawing.Color.Empty;
-            this.Sponcerdelbtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sponcerdelbtn.ForeColor = System.Drawing.Color.White;
-            this.Sponcerdelbtn.Image = ((System.Drawing.Image)(resources.GetObject("Sponcerdelbtn.Image")));
-            this.Sponcerdelbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.Sponcerdelbtn.Location = new System.Drawing.Point(342, 6);
-            this.Sponcerdelbtn.Name = "Sponcerdelbtn";
-            this.Sponcerdelbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.Sponcerdelbtn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.Sponcerdelbtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.Sponcerdelbtn.OnHoverImage = null;
-            this.Sponcerdelbtn.OnPressedColor = System.Drawing.Color.Black;
-            this.Sponcerdelbtn.Size = new System.Drawing.Size(160, 42);
-            this.Sponcerdelbtn.TabIndex = 6;
-            this.Sponcerdelbtn.Text = "Delete";
-            this.Sponcerdelbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Sponcerupdbtn
             // 
@@ -579,55 +578,20 @@
             this.Sponcerinsbtn.Text = "Insert";
             this.Sponcerinsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Sponcerpribtn
+            // tabPage3
             // 
-            this.Sponcerpribtn.AnimationHoverSpeed = 0.07F;
-            this.Sponcerpribtn.AnimationSpeed = 0.03F;
-            this.Sponcerpribtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.Sponcerpribtn.BorderColor = System.Drawing.Color.Black;
-            this.Sponcerpribtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.Sponcerpribtn.FocusedColor = System.Drawing.Color.Empty;
-            this.Sponcerpribtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sponcerpribtn.ForeColor = System.Drawing.Color.White;
-            this.Sponcerpribtn.Image = ((System.Drawing.Image)(resources.GetObject("Sponcerpribtn.Image")));
-            this.Sponcerpribtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.Sponcerpribtn.Location = new System.Drawing.Point(508, 6);
-            this.Sponcerpribtn.Name = "Sponcerpribtn";
-            this.Sponcerpribtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.Sponcerpribtn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.Sponcerpribtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.Sponcerpribtn.OnHoverImage = null;
-            this.Sponcerpribtn.OnPressedColor = System.Drawing.Color.Black;
-            this.Sponcerpribtn.Size = new System.Drawing.Size(160, 42);
-            this.Sponcerpribtn.TabIndex = 9;
-            this.Sponcerpribtn.Text = "Print";
-            this.Sponcerpribtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Sponcerpribtn.Click += new System.EventHandler(this.Sponcerpribtn_Click);
-            // 
-            // Sponcerrefrbtn
-            // 
-            this.Sponcerrefrbtn.AnimationHoverSpeed = 0.07F;
-            this.Sponcerrefrbtn.AnimationSpeed = 0.03F;
-            this.Sponcerrefrbtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.Sponcerrefrbtn.BorderColor = System.Drawing.Color.Black;
-            this.Sponcerrefrbtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.Sponcerrefrbtn.FocusedColor = System.Drawing.Color.Empty;
-            this.Sponcerrefrbtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sponcerrefrbtn.ForeColor = System.Drawing.Color.White;
-            this.Sponcerrefrbtn.Image = ((System.Drawing.Image)(resources.GetObject("Sponcerrefrbtn.Image")));
-            this.Sponcerrefrbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.Sponcerrefrbtn.Location = new System.Drawing.Point(674, 6);
-            this.Sponcerrefrbtn.Name = "Sponcerrefrbtn";
-            this.Sponcerrefrbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.Sponcerrefrbtn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.Sponcerrefrbtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.Sponcerrefrbtn.OnHoverImage = null;
-            this.Sponcerrefrbtn.OnPressedColor = System.Drawing.Color.Black;
-            this.Sponcerrefrbtn.Size = new System.Drawing.Size(160, 42);
-            this.Sponcerrefrbtn.TabIndex = 10;
-            this.Sponcerrefrbtn.Text = "Refresh";
-            this.Sponcerrefrbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Sponcerrefrbtn.Click += new System.EventHandler(this.gunaButton1_Click);
+            this.tabPage3.Controls.Add(this.Schoolrefreshbtn);
+            this.tabPage3.Controls.Add(this.Schoolpribtn);
+            this.tabPage3.Controls.Add(this.Schooldelbtn);
+            this.tabPage3.Controls.Add(this.Schooldgv);
+            this.tabPage3.Controls.Add(this.Schoolupdbtn);
+            this.tabPage3.Controls.Add(this.Schoolinsbtn);
+            this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1324, 503);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Schools";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Schoolrefreshbtn
             // 
@@ -777,6 +741,21 @@
             this.Schoolinsbtn.Text = "Insert";
             this.Schoolinsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.Classrefreshbtn);
+            this.tabPage4.Controls.Add(this.Classpribtn);
+            this.tabPage4.Controls.Add(this.Classdelbtn);
+            this.tabPage4.Controls.Add(this.Classdgv);
+            this.tabPage4.Controls.Add(this.Classupdbtn);
+            this.tabPage4.Controls.Add(this.Classinsbtn);
+            this.tabPage4.Location = new System.Drawing.Point(4, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1324, 503);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Class";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // Classrefreshbtn
             // 
             this.Classrefreshbtn.AnimationHoverSpeed = 0.07F;
@@ -924,6 +903,21 @@
             this.Classinsbtn.TabIndex = 14;
             this.Classinsbtn.Text = "Insert";
             this.Classinsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.Studentrefreshbtn);
+            this.tabPage5.Controls.Add(this.Studentpribtn);
+            this.tabPage5.Controls.Add(this.Studentdelbtn);
+            this.tabPage5.Controls.Add(this.bunifuCustomDataGrid4);
+            this.tabPage5.Controls.Add(this.Studentupdbtn);
+            this.tabPage5.Controls.Add(this.studentinsbtn);
+            this.tabPage5.Location = new System.Drawing.Point(4, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1324, 506);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Student";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // Studentrefreshbtn
             // 
@@ -1073,17 +1067,26 @@
             this.studentinsbtn.Text = "Insert";
             this.studentinsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // bunifuCustomLabel3
+            // tabPage6
             // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(1068, 73);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(252, 31);
-            this.bunifuCustomLabel3.TabIndex = 6;
-            this.bunifuCustomLabel3.Text = "Sponcer System\\Home";
+            this.tabPage6.Location = new System.Drawing.Point(4, 4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1324, 503);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Settings";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // Image
+            // 
+            this.Image.BackColor = System.Drawing.Color.Transparent;
+            this.Image.BaseColor = System.Drawing.Color.Transparent;
+            this.Image.Image = ((System.Drawing.Image)(resources.GetObject("Image.Image")));
+            this.Image.Location = new System.Drawing.Point(19, 58);
+            this.Image.Name = "Image";
+            this.Image.Size = new System.Drawing.Size(68, 66);
+            this.Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Image.TabIndex = 7;
+            this.Image.TabStop = false;
             // 
             // Form1
             // 
@@ -1100,20 +1103,20 @@
             this.Text = "Sponcer";
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.Studentdgv.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Sponcerdgv)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Schooldgv)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Classdgv)).EndInit();
+            this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1132,7 +1135,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.Framework.UI.BunifuCustomLabel headinglbl;
-        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Bunifu.UI.WinForms.BunifuPages Studentdgv;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1165,6 +1167,7 @@
         private Guna.UI.WinForms.GunaButton Studentupdbtn;
         private Guna.UI.WinForms.GunaButton studentinsbtn;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
+        private Guna.UI.WinForms.GunaPictureBox Image;
     }
 }
 
