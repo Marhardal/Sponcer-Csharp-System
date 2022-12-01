@@ -83,6 +83,7 @@
             this.bunifuCustomDataGrid4 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Studentupdbtn = new Guna.UI.WinForms.GunaButton();
             this.studentinsbtn = new Guna.UI.WinForms.GunaButton();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
@@ -103,6 +104,7 @@
             // 
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.bunifuCustomLabel3);
             this.bunifuGradientPanel2.Controls.Add(this.headinglbl);
             this.bunifuGradientPanel2.Controls.Add(this.gunaPictureBox1);
             this.bunifuGradientPanel2.Controls.Add(this.Settingsbtn);
@@ -111,10 +113,10 @@
             this.bunifuGradientPanel2.Controls.Add(this.Schoolbtn);
             this.bunifuGradientPanel2.Controls.Add(this.Sponcerbtn);
             this.bunifuGradientPanel2.Controls.Add(this.Homebtn);
-            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.DarkOliveGreen;
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.DarkOliveGreen;
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.DarkOliveGreen;
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.DarkOliveGreen;
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 128);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
@@ -1071,6 +1073,18 @@
             this.studentinsbtn.Text = "Insert";
             this.studentinsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(1068, 73);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(252, 31);
+            this.bunifuCustomLabel3.TabIndex = 6;
+            this.bunifuCustomLabel3.Text = "Sponcer System\\Home";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1150,6 +1164,7 @@
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid4;
         private Guna.UI.WinForms.GunaButton Studentupdbtn;
         private Guna.UI.WinForms.GunaButton studentinsbtn;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
     }
 }
 
