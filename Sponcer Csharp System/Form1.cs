@@ -19,32 +19,53 @@ namespace Sponcer_Csharp_System
 
         private void Homebtn_Click(object sender, EventArgs e)
         {
-            Pages.SetPage("Home");
+            Studentdgv.SetPage("Home");
+            headinglbl.Text = "Sponcer System\\Home";
         }
 
         private void Sponcerbtn_Click(object sender, EventArgs e)
         {
-            Pages.SetPage("Sponcer");
+            Studentdgv.SetPage("Sponcer");
+            headinglbl.Text = "Sponcer System\\Sponcer";
+
         }
 
         private void Schoolbtn_Click(object sender, EventArgs e)
         {
-            Pages.SetPage("School");
+            Studentdgv.SetPage("Schools");
+            headinglbl.Text = "Sponcer System\\Schools";
+
         }
 
         private void Classbtn_Click(object sender, EventArgs e)
         {
-            Pages.SetPage("Class");
+            Studentdgv.SetPage("Class");
+            headinglbl.Text = "Sponcer System\\Class";
+
         }
 
         private void Studentbtn_Click(object sender, EventArgs e)
         {
-            Pages.SetPage("Students");
+            Studentdgv.SetPage("Student");
+            headinglbl.Text = "Sponcer System\\Students";
+
         }
 
         private void Settingsbtn_Click(object sender, EventArgs e)
         {
-            Pages.SetPage("Settings");
+            Studentdgv.SetPage("Settings");
+            headinglbl.Text = "Sponcer System\\Settings";
+
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sponcerpribtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
