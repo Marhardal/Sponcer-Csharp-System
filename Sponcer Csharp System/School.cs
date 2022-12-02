@@ -26,7 +26,7 @@ namespace Sponcer_Csharp_System
         {
             try
             {
-                if (nmtxt.Text != "" || loctxt.Text != "" || posttxt.Text != "" || faccmd.selectedIndex != 0 || typcmd.selectedIndex != 0 || feestxt.Text != "") 
+                if (nmtxt.Text != "" & loctxt.Text != "" & posttxt.Text != "" & faccmd.selectedIndex != 0 & typcmd.selectedIndex != 0 & feestxt.Text != "") 
                 {
                     if (connection.State == ConnectionState.Closed)
                     {
@@ -46,14 +46,16 @@ namespace Sponcer_Csharp_System
                         }
                         else
                         {
-                            string insert = "insert into School values(@nm, @loc, @fac, @pos, @typ, @fee, now())";
+                            MessageBox.Show("Yoh!!");
+                            sqlData.Close();
+                            string insert = "insert into School values(@nm, @loc, @fac, @pos, @typ, @fee, '"+DateTime.Now.ToString("dd/MM/yyyy")+"')";
                             com =new SqlCommand(insert, connection);
                             com.Parameters.Add(new SqlParameter("@fac", faccmd.selectedValue));
                             com.Parameters.Add(new SqlParameter("@pos", posttxt.Text));
                             com.Parameters.Add(new SqlParameter("@loc", loctxt.Text));
                             com.Parameters.Add(new SqlParameter("@typ", typcmd.selectedValue));
-                            com.Parameters.Add(new SqlParameter("nm", nmtxt.Text));
-                            com.Parameters.Add(new SqlParameter("@fee", feestxt));
+                            com.Parameters.Add(new SqlParameter("@nm", nmtxt.Text));
+                            com.Parameters.Add(new SqlParameter("@fee", feestxt.Text));
                             var res=com.ExecuteNonQuery();
                             if (res != 0)
                             {

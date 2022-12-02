@@ -30,10 +30,8 @@
         {
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.nmtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Updatebtn = new Guna.UI.WinForms.GunaButton();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.loctxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.typcmd = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -43,6 +41,8 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.faccmd = new Bunifu.Framework.UI.BunifuDropdown();
             this.Insertbtn = new Guna.UI.WinForms.GunaButton();
+            this.loctxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.nmtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -51,7 +51,7 @@
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(9, 52);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(9, 54);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(201, 28);
             this.bunifuCustomLabel1.TabIndex = 10;
@@ -63,35 +63,11 @@
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Historic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(105, 8);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(105, 10);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(197, 38);
             this.bunifuCustomLabel2.TabIndex = 9;
             this.bunifuCustomLabel2.Text = "Enter Schools";
-            // 
-            // nmtxt
-            // 
-            this.nmtxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.nmtxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.nmtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nmtxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.nmtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nmtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.nmtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.nmtxt.HintForeColor = System.Drawing.Color.DimGray;
-            this.nmtxt.HintText = "Enter the School Name.";
-            this.nmtxt.isPassword = false;
-            this.nmtxt.LineFocusedColor = System.Drawing.Color.Blue;
-            this.nmtxt.LineIdleColor = System.Drawing.Color.Gray;
-            this.nmtxt.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.nmtxt.LineThickness = 3;
-            this.nmtxt.Location = new System.Drawing.Point(9, 86);
-            this.nmtxt.Margin = new System.Windows.Forms.Padding(4);
-            this.nmtxt.MaxLength = 32767;
-            this.nmtxt.Name = "nmtxt";
-            this.nmtxt.Size = new System.Drawing.Size(426, 41);
-            this.nmtxt.TabIndex = 8;
-            this.nmtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Updatebtn
             // 
@@ -124,35 +100,11 @@
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(9, 133);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(9, 135);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(228, 28);
             this.bunifuCustomLabel3.TabIndex = 13;
             this.bunifuCustomLabel3.Text = "Enter School Location.";
-            // 
-            // loctxt
-            // 
-            this.loctxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.loctxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.loctxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.loctxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.loctxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.loctxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.loctxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.loctxt.HintForeColor = System.Drawing.Color.DimGray;
-            this.loctxt.HintText = "Enter the School Location.";
-            this.loctxt.isPassword = false;
-            this.loctxt.LineFocusedColor = System.Drawing.Color.Blue;
-            this.loctxt.LineIdleColor = System.Drawing.Color.Gray;
-            this.loctxt.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.loctxt.LineThickness = 3;
-            this.loctxt.Location = new System.Drawing.Point(9, 167);
-            this.loctxt.Margin = new System.Windows.Forms.Padding(4);
-            this.loctxt.MaxLength = 32767;
-            this.loctxt.Name = "loctxt";
-            this.loctxt.Size = new System.Drawing.Size(426, 41);
-            this.loctxt.TabIndex = 12;
-            this.loctxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel4
             // 
@@ -160,7 +112,7 @@
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(9, 376);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(9, 378);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(191, 28);
             this.bunifuCustomLabel4.TabIndex = 15;
@@ -178,7 +130,7 @@
         "Day schooling",
         "Self Boarding",
         "Boarding"};
-            this.typcmd.Location = new System.Drawing.Point(9, 410);
+            this.typcmd.Location = new System.Drawing.Point(9, 412);
             this.typcmd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.typcmd.Name = "typcmd";
             this.typcmd.NomalColor = System.Drawing.Color.Transparent;
@@ -193,7 +145,7 @@
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(9, 457);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(9, 459);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(187, 28);
             this.bunifuCustomLabel5.TabIndex = 18;
@@ -215,7 +167,7 @@
             this.feestxt.LineIdleColor = System.Drawing.Color.Gray;
             this.feestxt.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.feestxt.LineThickness = 3;
-            this.feestxt.Location = new System.Drawing.Point(9, 491);
+            this.feestxt.Location = new System.Drawing.Point(9, 493);
             this.feestxt.Margin = new System.Windows.Forms.Padding(4);
             this.feestxt.MaxLength = 32767;
             this.feestxt.Name = "feestxt";
@@ -229,7 +181,7 @@
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(9, 214);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(9, 216);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(322, 28);
             this.bunifuCustomLabel6.TabIndex = 20;
@@ -251,7 +203,7 @@
             this.posttxt.LineIdleColor = System.Drawing.Color.Gray;
             this.posttxt.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.posttxt.LineThickness = 3;
-            this.posttxt.Location = new System.Drawing.Point(9, 248);
+            this.posttxt.Location = new System.Drawing.Point(9, 250);
             this.posttxt.Margin = new System.Windows.Forms.Padding(4);
             this.posttxt.MaxLength = 32767;
             this.posttxt.Name = "posttxt";
@@ -265,7 +217,7 @@
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(9, 295);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(9, 297);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(214, 28);
             this.bunifuCustomLabel7.TabIndex = 22;
@@ -283,7 +235,7 @@
         "Primary",
         "Secondary",
         "Tertially"};
-            this.faccmd.Location = new System.Drawing.Point(9, 329);
+            this.faccmd.Location = new System.Drawing.Point(9, 331);
             this.faccmd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.faccmd.Name = "faccmd";
             this.faccmd.NomalColor = System.Drawing.Color.Transparent;
@@ -304,7 +256,7 @@
             this.Insertbtn.ForeColor = System.Drawing.Color.White;
             this.Insertbtn.Image = null;
             this.Insertbtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.Insertbtn.Location = new System.Drawing.Point(142, 539);
+            this.Insertbtn.Location = new System.Drawing.Point(142, 541);
             this.Insertbtn.Name = "Insertbtn";
             this.Insertbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.Insertbtn.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -317,10 +269,60 @@
             this.Insertbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Insertbtn.Click += new System.EventHandler(this.Insertbtn_Click);
             // 
+            // loctxt
+            // 
+            this.loctxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.loctxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.loctxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.loctxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.loctxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.loctxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.loctxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loctxt.HintForeColor = System.Drawing.Color.DimGray;
+            this.loctxt.HintText = "Enter the School Location.";
+            this.loctxt.isPassword = false;
+            this.loctxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.loctxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.loctxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.loctxt.LineThickness = 3;
+            this.loctxt.Location = new System.Drawing.Point(9, 169);
+            this.loctxt.Margin = new System.Windows.Forms.Padding(4);
+            this.loctxt.MaxLength = 32767;
+            this.loctxt.Name = "loctxt";
+            this.loctxt.Size = new System.Drawing.Size(426, 41);
+            this.loctxt.TabIndex = 25;
+            this.loctxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // nmtxt
+            // 
+            this.nmtxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.nmtxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.nmtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nmtxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.nmtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nmtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.nmtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nmtxt.HintForeColor = System.Drawing.Color.DimGray;
+            this.nmtxt.HintText = "Enter the School Name.";
+            this.nmtxt.isPassword = false;
+            this.nmtxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.nmtxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.nmtxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.nmtxt.LineThickness = 3;
+            this.nmtxt.Location = new System.Drawing.Point(9, 88);
+            this.nmtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.nmtxt.MaxLength = 32767;
+            this.nmtxt.Name = "nmtxt";
+            this.nmtxt.Size = new System.Drawing.Size(426, 41);
+            this.nmtxt.TabIndex = 26;
+            this.nmtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // School
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.nmtxt);
+            this.Controls.Add(this.loctxt);
             this.Controls.Add(this.faccmd);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.bunifuCustomLabel6);
@@ -330,12 +332,10 @@
             this.Controls.Add(this.typcmd);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCustomLabel3);
-            this.Controls.Add(this.loctxt);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCustomLabel2);
-            this.Controls.Add(this.nmtxt);
-            this.Controls.Add(this.Updatebtn);
             this.Controls.Add(this.Insertbtn);
+            this.Controls.Add(this.Updatebtn);
             this.Name = "School";
             this.Size = new System.Drawing.Size(452, 590);
             this.ResumeLayout(false);
@@ -354,11 +354,11 @@
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         internal Guna.UI.WinForms.GunaButton Insertbtn;
-        internal Bunifu.Framework.UI.BunifuMaterialTextbox nmtxt;
-        internal Bunifu.Framework.UI.BunifuMaterialTextbox loctxt;
         internal Bunifu.Framework.UI.BunifuDropdown typcmd;
         internal Bunifu.Framework.UI.BunifuMaterialTextbox feestxt;
         internal Bunifu.Framework.UI.BunifuMaterialTextbox posttxt;
         internal Bunifu.Framework.UI.BunifuDropdown faccmd;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox loctxt;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox nmtxt;
     }
 }

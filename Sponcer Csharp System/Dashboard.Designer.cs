@@ -517,15 +517,18 @@
             // 
             // Sponcerdgv
             // 
+            this.Sponcerdgv.AllowUserToAddRows = false;
+            this.Sponcerdgv.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Sponcerdgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Sponcerdgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Sponcerdgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.Sponcerdgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Sponcerdgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.ForestGreen;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -533,13 +536,15 @@
             this.Sponcerdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Sponcerdgv.DoubleBuffered = true;
             this.Sponcerdgv.EnableHeadersVisualStyles = false;
-            this.Sponcerdgv.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.Sponcerdgv.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.Sponcerdgv.HeaderBgColor = System.Drawing.Color.ForestGreen;
+            this.Sponcerdgv.HeaderForeColor = System.Drawing.Color.White;
             this.Sponcerdgv.Location = new System.Drawing.Point(8, 54);
             this.Sponcerdgv.Name = "Sponcerdgv";
+            this.Sponcerdgv.ReadOnly = true;
             this.Sponcerdgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.Sponcerdgv.RowHeadersWidth = 51;
             this.Sponcerdgv.RowTemplate.Height = 24;
+            this.Sponcerdgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Sponcerdgv.Size = new System.Drawing.Size(1307, 462);
             this.Sponcerdgv.TabIndex = 0;
             // 
@@ -684,15 +689,18 @@
             // 
             // Schooldgv
             // 
+            this.Schooldgv.AllowUserToAddRows = false;
+            this.Schooldgv.AllowUserToDeleteRows = false;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Schooldgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.Schooldgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Schooldgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.Schooldgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Schooldgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.ForestGreen;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -700,13 +708,15 @@
             this.Schooldgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Schooldgv.DoubleBuffered = true;
             this.Schooldgv.EnableHeadersVisualStyles = false;
-            this.Schooldgv.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.Schooldgv.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.Schooldgv.HeaderBgColor = System.Drawing.Color.ForestGreen;
+            this.Schooldgv.HeaderForeColor = System.Drawing.Color.White;
             this.Schooldgv.Location = new System.Drawing.Point(9, 54);
             this.Schooldgv.Name = "Schooldgv";
+            this.Schooldgv.ReadOnly = true;
             this.Schooldgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.Schooldgv.RowHeadersWidth = 51;
             this.Schooldgv.RowTemplate.Height = 24;
+            this.Schooldgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Schooldgv.Size = new System.Drawing.Size(1307, 462);
             this.Schooldgv.TabIndex = 11;
             // 

@@ -31,8 +31,8 @@ namespace Sponcer_Csharp_System
                     if (connection.State==ConnectionState.Closed)
                     {
                         connection.Open();
-                        com = new SqlCommand();
-                        string sql = "Select * from Sponcer Where Name='" + sponcertxt.Text + "'";
+                        string sql = "Select * from Sponser Where Name='" + sponcertxt.Text + "'";
+                        com = new SqlCommand(sql, connection);
                         SqlDataReader sdr= com.ExecuteReader();
                         if (sdr.HasRows)
                         {
@@ -42,7 +42,8 @@ namespace Sponcer_Csharp_System
                         }
                         else
                         {
-                            string insert = "Insert into Sponcer values('" + sponcertxt.Text + "', '" + DateTime.Now.ToString("dd/mm/yyyy") + "')";
+                            sdr.Close();
+                            string insert = "Insert into Sponser values('" + sponcertxt.Text + "', '" + DateTime.Now.ToString("dd/mm/yyyy") + "')";
                             com = new SqlCommand(insert, connection);
                             var res = com.ExecuteNonQuery();
                             if (res > 0)
@@ -78,7 +79,7 @@ namespace Sponcer_Csharp_System
             {
                 if (connection.State ==ConnectionState.Closed)
                 {
-                    string sql = "Update Sponcer set Name='" + sponcertxt.Text + "' where ID='" + id + "';";
+                    string sql = "Update Sponser set Name='" + sponcertxt.Text + "' where ID='" + id + "';";
                     com = new SqlCommand(sql, connection);
                     var res = com.ExecuteNonQuery();
                     if (res > 0)

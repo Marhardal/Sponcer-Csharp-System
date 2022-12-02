@@ -37,7 +37,7 @@ namespace Sponcer_Csharp_System
                 if (connection.State == ConnectionState.Closed) 
                 {
                     connection.Open();
-                    string sql = "Select * from Sponcer";
+                    string sql = "Select * from Sponser";
                     com = new SqlCommand(sql, connection);
                     SqlDataAdapter sqlData = new SqlDataAdapter(com);
                     DataTable dt = new DataTable();
@@ -201,7 +201,7 @@ namespace Sponcer_Csharp_System
         {
             Upsert upsert = new Upsert();
             School school = new School();
-            school.Location = new Point(Left, Top);
+            school.Location = new Point(0, 0);
             school.bunifuCustomLabel2.Text = "Create School";
             upsert.Controls.Add(school);
             upsert.Show();
