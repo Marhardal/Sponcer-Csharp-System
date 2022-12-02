@@ -389,10 +389,10 @@
             this.Studentdgv.Location = new System.Drawing.Point(0, 258);
             this.Studentdgv.Multiline = true;
             this.Studentdgv.Name = "Studentdgv";
-            this.Studentdgv.Page = this.tabPage2;
-            this.Studentdgv.PageIndex = 1;
-            this.Studentdgv.PageName = "tabPage2";
-            this.Studentdgv.PageTitle = "Sponcer";
+            this.Studentdgv.Page = this.tabPage3;
+            this.Studentdgv.PageIndex = 2;
+            this.Studentdgv.PageName = "tabPage3";
+            this.Studentdgv.PageTitle = "Schools";
             this.Studentdgv.SelectedIndex = 0;
             this.Studentdgv.Size = new System.Drawing.Size(1332, 535);
             this.Studentdgv.TabIndex = 2;
@@ -513,6 +513,7 @@
             this.Sponcerdelbtn.TabIndex = 6;
             this.Sponcerdelbtn.Text = "Delete";
             this.Sponcerdelbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Sponcerdelbtn.Click += new System.EventHandler(this.Sponcerdelbtn_Click);
             // 
             // Sponcerdgv
             // 
@@ -630,6 +631,7 @@
             this.Schoolrefreshbtn.TabIndex = 16;
             this.Schoolrefreshbtn.Text = "Refresh";
             this.Schoolrefreshbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Schoolrefreshbtn.Click += new System.EventHandler(this.Schoolrefreshbtn_Click);
             // 
             // Schoolpribtn
             // 
@@ -678,6 +680,7 @@
             this.Schooldelbtn.TabIndex = 12;
             this.Schooldelbtn.Text = "Delete";
             this.Schooldelbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Schooldelbtn.Click += new System.EventHandler(this.Schooldelbtn_Click);
             // 
             // Schooldgv
             // 
@@ -730,6 +733,7 @@
             this.Schoolupdbtn.TabIndex = 13;
             this.Schoolupdbtn.Text = "Update";
             this.Schoolupdbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Schoolupdbtn.Click += new System.EventHandler(this.Schoolupdbtn_Click);
             // 
             // Schoolinsbtn
             // 
@@ -754,6 +758,7 @@
             this.Schoolinsbtn.TabIndex = 14;
             this.Schoolinsbtn.Text = "Insert";
             this.Schoolinsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Schoolinsbtn.Click += new System.EventHandler(this.Schoolinsbtn_Click);
             // 
             // tabPage4
             // 

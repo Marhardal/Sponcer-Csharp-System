@@ -30,18 +30,18 @@
         {
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.sponcertxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.nmtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Updatebtn = new Guna.UI.WinForms.GunaButton();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.loctxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.typcmd = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.feestxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.posttxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.faccmd = new Bunifu.Framework.UI.BunifuDropdown();
             this.Insertbtn = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
             // 
@@ -69,29 +69,29 @@
             this.bunifuCustomLabel2.TabIndex = 9;
             this.bunifuCustomLabel2.Text = "Enter Schools";
             // 
-            // sponcertxt
+            // nmtxt
             // 
-            this.sponcertxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.sponcertxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.sponcertxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sponcertxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.sponcertxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sponcertxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.sponcertxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sponcertxt.HintForeColor = System.Drawing.Color.DimGray;
-            this.sponcertxt.HintText = "Enter the School Name.";
-            this.sponcertxt.isPassword = false;
-            this.sponcertxt.LineFocusedColor = System.Drawing.Color.Blue;
-            this.sponcertxt.LineIdleColor = System.Drawing.Color.Gray;
-            this.sponcertxt.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.sponcertxt.LineThickness = 3;
-            this.sponcertxt.Location = new System.Drawing.Point(9, 86);
-            this.sponcertxt.Margin = new System.Windows.Forms.Padding(4);
-            this.sponcertxt.MaxLength = 32767;
-            this.sponcertxt.Name = "sponcertxt";
-            this.sponcertxt.Size = new System.Drawing.Size(426, 41);
-            this.sponcertxt.TabIndex = 8;
-            this.sponcertxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.nmtxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.nmtxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.nmtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nmtxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.nmtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nmtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.nmtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nmtxt.HintForeColor = System.Drawing.Color.DimGray;
+            this.nmtxt.HintText = "Enter the School Name.";
+            this.nmtxt.isPassword = false;
+            this.nmtxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.nmtxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.nmtxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.nmtxt.LineThickness = 3;
+            this.nmtxt.Location = new System.Drawing.Point(9, 86);
+            this.nmtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.nmtxt.MaxLength = 32767;
+            this.nmtxt.Name = "nmtxt";
+            this.nmtxt.Size = new System.Drawing.Size(426, 41);
+            this.nmtxt.TabIndex = 8;
+            this.nmtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Updatebtn
             // 
@@ -116,6 +116,7 @@
             this.Updatebtn.TabIndex = 11;
             this.Updatebtn.Text = "Update School";
             this.Updatebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
             // 
             // bunifuCustomLabel3
             // 
@@ -129,29 +130,29 @@
             this.bunifuCustomLabel3.TabIndex = 13;
             this.bunifuCustomLabel3.Text = "Enter School Location.";
             // 
-            // bunifuMaterialTextbox1
+            // loctxt
             // 
-            this.bunifuMaterialTextbox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuMaterialTextbox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuMaterialTextbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuMaterialTextbox1.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.DimGray;
-            this.bunifuMaterialTextbox1.HintText = "Enter the School Location.";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(9, 167);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.MaxLength = 32767;
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(426, 41);
-            this.bunifuMaterialTextbox1.TabIndex = 12;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.loctxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.loctxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.loctxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.loctxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.loctxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.loctxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.loctxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loctxt.HintForeColor = System.Drawing.Color.DimGray;
+            this.loctxt.HintText = "Enter the School Location.";
+            this.loctxt.isPassword = false;
+            this.loctxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.loctxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.loctxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.loctxt.LineThickness = 3;
+            this.loctxt.Location = new System.Drawing.Point(9, 167);
+            this.loctxt.Margin = new System.Windows.Forms.Padding(4);
+            this.loctxt.MaxLength = 32767;
+            this.loctxt.Name = "loctxt";
+            this.loctxt.Size = new System.Drawing.Size(426, 41);
+            this.loctxt.TabIndex = 12;
+            this.loctxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel4
             // 
@@ -165,26 +166,26 @@
             this.bunifuCustomLabel4.TabIndex = 15;
             this.bunifuCustomLabel4.Text = "Enter School Type.";
             // 
-            // bunifuDropdown1
+            // typcmd
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.items = new string[] {
+            this.typcmd.BackColor = System.Drawing.Color.Transparent;
+            this.typcmd.BorderRadius = 3;
+            this.typcmd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.typcmd.DisabledColor = System.Drawing.Color.Gray;
+            this.typcmd.ForeColor = System.Drawing.Color.Black;
+            this.typcmd.items = new string[] {
         "Select the school type.",
         "Day schooling",
         "Self Boarding",
         "Boarding"};
-            this.bunifuDropdown1.Location = new System.Drawing.Point(9, 410);
-            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuDropdown1.selectedIndex = 0;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(426, 41);
-            this.bunifuDropdown1.TabIndex = 16;
+            this.typcmd.Location = new System.Drawing.Point(9, 410);
+            this.typcmd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.typcmd.Name = "typcmd";
+            this.typcmd.NomalColor = System.Drawing.Color.Transparent;
+            this.typcmd.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.typcmd.selectedIndex = 0;
+            this.typcmd.Size = new System.Drawing.Size(426, 41);
+            this.typcmd.TabIndex = 16;
             // 
             // bunifuCustomLabel5
             // 
@@ -198,29 +199,29 @@
             this.bunifuCustomLabel5.TabIndex = 18;
             this.bunifuCustomLabel5.Text = "Enter School Fees.";
             // 
-            // bunifuMaterialTextbox2
+            // feestxt
             // 
-            this.bunifuMaterialTextbox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuMaterialTextbox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuMaterialTextbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuMaterialTextbox2.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.DimGray;
-            this.bunifuMaterialTextbox2.HintText = "Enter the School Fees.";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(9, 491);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.MaxLength = 32767;
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(426, 41);
-            this.bunifuMaterialTextbox2.TabIndex = 17;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.feestxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.feestxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.feestxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.feestxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.feestxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.feestxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.feestxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.feestxt.HintForeColor = System.Drawing.Color.DimGray;
+            this.feestxt.HintText = "Enter the School Fees.";
+            this.feestxt.isPassword = false;
+            this.feestxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.feestxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.feestxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.feestxt.LineThickness = 3;
+            this.feestxt.Location = new System.Drawing.Point(9, 491);
+            this.feestxt.Margin = new System.Windows.Forms.Padding(4);
+            this.feestxt.MaxLength = 32767;
+            this.feestxt.Name = "feestxt";
+            this.feestxt.Size = new System.Drawing.Size(426, 41);
+            this.feestxt.TabIndex = 17;
+            this.feestxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel6
             // 
@@ -234,29 +235,29 @@
             this.bunifuCustomLabel6.TabIndex = 20;
             this.bunifuCustomLabel6.Text = "Enter School Postal Address No.";
             // 
-            // bunifuMaterialTextbox3
+            // posttxt
             // 
-            this.bunifuMaterialTextbox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuMaterialTextbox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuMaterialTextbox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuMaterialTextbox3.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.DimGray;
-            this.bunifuMaterialTextbox3.HintText = "Enter the School Postal Address Number.";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(9, 248);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.MaxLength = 32767;
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(426, 41);
-            this.bunifuMaterialTextbox3.TabIndex = 19;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.posttxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.posttxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.posttxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.posttxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.posttxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.posttxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.posttxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.posttxt.HintForeColor = System.Drawing.Color.DimGray;
+            this.posttxt.HintText = "Enter the School Postal Address Number.";
+            this.posttxt.isPassword = false;
+            this.posttxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.posttxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.posttxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.posttxt.LineThickness = 3;
+            this.posttxt.Location = new System.Drawing.Point(9, 248);
+            this.posttxt.Margin = new System.Windows.Forms.Padding(4);
+            this.posttxt.MaxLength = 32767;
+            this.posttxt.Name = "posttxt";
+            this.posttxt.Size = new System.Drawing.Size(426, 41);
+            this.posttxt.TabIndex = 19;
+            this.posttxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel7
             // 
@@ -270,26 +271,26 @@
             this.bunifuCustomLabel7.TabIndex = 22;
             this.bunifuCustomLabel7.Text = "Enter School Faculty.";
             // 
-            // bunifuDropdown2
+            // faccmd
             // 
-            this.bunifuDropdown2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown2.BorderRadius = 3;
-            this.bunifuDropdown2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuDropdown2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown2.items = new string[] {
+            this.faccmd.BackColor = System.Drawing.Color.Transparent;
+            this.faccmd.BorderRadius = 3;
+            this.faccmd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.faccmd.DisabledColor = System.Drawing.Color.Gray;
+            this.faccmd.ForeColor = System.Drawing.Color.Black;
+            this.faccmd.items = new string[] {
         "Select the School Faculty Type.",
         "Primary",
         "Secondary",
         "Tertially"};
-            this.bunifuDropdown2.Location = new System.Drawing.Point(9, 329);
-            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.NomalColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuDropdown2.selectedIndex = 0;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(426, 41);
-            this.bunifuDropdown2.TabIndex = 23;
+            this.faccmd.Location = new System.Drawing.Point(9, 329);
+            this.faccmd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.faccmd.Name = "faccmd";
+            this.faccmd.NomalColor = System.Drawing.Color.Transparent;
+            this.faccmd.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.faccmd.selectedIndex = 0;
+            this.faccmd.Size = new System.Drawing.Size(426, 41);
+            this.faccmd.TabIndex = 23;
             // 
             // Insertbtn
             // 
@@ -314,26 +315,27 @@
             this.Insertbtn.TabIndex = 24;
             this.Insertbtn.Text = "Enter School";
             this.Insertbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Insertbtn.Click += new System.EventHandler(this.Insertbtn_Click);
             // 
             // School
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.Insertbtn);
-            this.Controls.Add(this.bunifuDropdown2);
+            this.Controls.Add(this.faccmd);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.bunifuCustomLabel6);
-            this.Controls.Add(this.bunifuMaterialTextbox3);
+            this.Controls.Add(this.posttxt);
             this.Controls.Add(this.bunifuCustomLabel5);
-            this.Controls.Add(this.bunifuMaterialTextbox2);
-            this.Controls.Add(this.bunifuDropdown1);
+            this.Controls.Add(this.feestxt);
+            this.Controls.Add(this.typcmd);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCustomLabel3);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
+            this.Controls.Add(this.loctxt);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCustomLabel2);
-            this.Controls.Add(this.sponcertxt);
+            this.Controls.Add(this.nmtxt);
             this.Controls.Add(this.Updatebtn);
+            this.Controls.Add(this.Insertbtn);
             this.Name = "School";
             this.Size = new System.Drawing.Size(452, 590);
             this.ResumeLayout(false);
@@ -345,18 +347,18 @@
 
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox sponcertxt;
         internal Guna.UI.WinForms.GunaButton Updatebtn;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
         internal Guna.UI.WinForms.GunaButton Insertbtn;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox nmtxt;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox loctxt;
+        internal Bunifu.Framework.UI.BunifuDropdown typcmd;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox feestxt;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox posttxt;
+        internal Bunifu.Framework.UI.BunifuDropdown faccmd;
     }
 }
