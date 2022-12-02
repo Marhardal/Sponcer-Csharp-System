@@ -327,5 +327,11 @@ namespace Sponcer_Csharp_System
                 MessageBox.Show(er.Message);
             }
         }
+
+        private void Classrefreshbtn_Click(object sender, EventArgs e)
+        {
+            lass();
+            Classdgv.Refresh();
+        }
     }
 }
