@@ -30,10 +30,10 @@
         {
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.sponcertxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.nmtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Updatebtn = new Guna.UI.WinForms.GunaButton();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.nmcmd = new Bunifu.Framework.UI.BunifuDropdown();
             this.Insertbtn = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
             // 
@@ -61,29 +61,29 @@
             this.bunifuCustomLabel2.TabIndex = 9;
             this.bunifuCustomLabel2.Text = "Enter Class";
             // 
-            // sponcertxt
+            // nmtxt
             // 
-            this.sponcertxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.sponcertxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.sponcertxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sponcertxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.sponcertxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sponcertxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.sponcertxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sponcertxt.HintForeColor = System.Drawing.Color.DimGray;
-            this.sponcertxt.HintText = "Enter the Class Name.";
-            this.sponcertxt.isPassword = false;
-            this.sponcertxt.LineFocusedColor = System.Drawing.Color.Blue;
-            this.sponcertxt.LineIdleColor = System.Drawing.Color.Gray;
-            this.sponcertxt.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.sponcertxt.LineThickness = 3;
-            this.sponcertxt.Location = new System.Drawing.Point(4, 173);
-            this.sponcertxt.Margin = new System.Windows.Forms.Padding(4);
-            this.sponcertxt.MaxLength = 32767;
-            this.sponcertxt.Name = "sponcertxt";
-            this.sponcertxt.Size = new System.Drawing.Size(426, 41);
-            this.sponcertxt.TabIndex = 8;
-            this.sponcertxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.nmtxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.nmtxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.nmtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nmtxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.nmtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nmtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.nmtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nmtxt.HintForeColor = System.Drawing.Color.DimGray;
+            this.nmtxt.HintText = "Enter the Class Name.";
+            this.nmtxt.isPassword = false;
+            this.nmtxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.nmtxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.nmtxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.nmtxt.LineThickness = 3;
+            this.nmtxt.Location = new System.Drawing.Point(4, 173);
+            this.nmtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.nmtxt.MaxLength = 32767;
+            this.nmtxt.Name = "nmtxt";
+            this.nmtxt.Size = new System.Drawing.Size(426, 41);
+            this.nmtxt.TabIndex = 8;
+            this.nmtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Updatebtn
             // 
@@ -108,6 +108,7 @@
             this.Updatebtn.TabIndex = 11;
             this.Updatebtn.Text = "Update Class";
             this.Updatebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
             // 
             // bunifuCustomLabel4
             // 
@@ -121,23 +122,23 @@
             this.bunifuCustomLabel4.TabIndex = 17;
             this.bunifuCustomLabel4.Text = "Enter School Name.";
             // 
-            // bunifuDropdown1
+            // nmcmd
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.items = new string[] {
+            this.nmcmd.BackColor = System.Drawing.Color.Transparent;
+            this.nmcmd.BorderRadius = 3;
+            this.nmcmd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nmcmd.DisabledColor = System.Drawing.Color.Gray;
+            this.nmcmd.ForeColor = System.Drawing.Color.Black;
+            this.nmcmd.items = new string[] {
         "Select the school Name."};
-            this.bunifuDropdown1.Location = new System.Drawing.Point(3, 90);
-            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(426, 41);
-            this.bunifuDropdown1.TabIndex = 18;
+            this.nmcmd.Location = new System.Drawing.Point(3, 90);
+            this.nmcmd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nmcmd.Name = "nmcmd";
+            this.nmcmd.NomalColor = System.Drawing.Color.Transparent;
+            this.nmcmd.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.nmcmd.selectedIndex = 0;
+            this.nmcmd.Size = new System.Drawing.Size(426, 41);
+            this.nmcmd.TabIndex = 18;
             // 
             // Insertbtn
             // 
@@ -162,20 +163,22 @@
             this.Insertbtn.TabIndex = 19;
             this.Insertbtn.Text = "Enter Class";
             this.Insertbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Insertbtn.Click += new System.EventHandler(this.Insertbtn_Click);
             // 
             // Class
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.Insertbtn);
-            this.Controls.Add(this.bunifuDropdown1);
+            this.Controls.Add(this.nmcmd);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCustomLabel2);
-            this.Controls.Add(this.sponcertxt);
+            this.Controls.Add(this.nmtxt);
             this.Controls.Add(this.Updatebtn);
+            this.Controls.Add(this.Insertbtn);
             this.Name = "Class";
             this.Size = new System.Drawing.Size(434, 278);
+            this.Load += new System.EventHandler(this.Class_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,10 +188,10 @@
 
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox sponcertxt;
         internal Guna.UI.WinForms.GunaButton Updatebtn;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown nmcmd;
         internal Guna.UI.WinForms.GunaButton Insertbtn;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox nmtxt;
     }
 }

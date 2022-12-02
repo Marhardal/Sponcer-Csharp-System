@@ -389,10 +389,10 @@
             this.Studentdgv.Location = new System.Drawing.Point(0, 258);
             this.Studentdgv.Multiline = true;
             this.Studentdgv.Name = "Studentdgv";
-            this.Studentdgv.Page = this.tabPage3;
-            this.Studentdgv.PageIndex = 2;
-            this.Studentdgv.PageName = "tabPage3";
-            this.Studentdgv.PageTitle = "Schools";
+            this.Studentdgv.Page = this.tabPage4;
+            this.Studentdgv.PageIndex = 3;
+            this.Studentdgv.PageName = "tabPage4";
+            this.Studentdgv.PageTitle = "Class";
             this.Studentdgv.SelectedIndex = 0;
             this.Studentdgv.Size = new System.Drawing.Size(1332, 535);
             this.Studentdgv.TabIndex = 2;
@@ -856,6 +856,7 @@
             this.Classdelbtn.TabIndex = 12;
             this.Classdelbtn.Text = "Delete";
             this.Classdelbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Classdelbtn.Click += new System.EventHandler(this.Classdelbtn_Click);
             // 
             // Classdgv
             // 
@@ -908,6 +909,7 @@
             this.Classupdbtn.TabIndex = 13;
             this.Classupdbtn.Text = "Update";
             this.Classupdbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Classupdbtn.Click += new System.EventHandler(this.Classupdbtn_Click);
             // 
             // Classinsbtn
             // 
@@ -932,6 +934,7 @@
             this.Classinsbtn.TabIndex = 14;
             this.Classinsbtn.Text = "Insert";
             this.Classinsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Classinsbtn.Click += new System.EventHandler(this.Classinsbtn_Click);
             // 
             // tabPage5
             // 
