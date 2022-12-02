@@ -808,6 +808,7 @@
             this.Classrefreshbtn.TabIndex = 16;
             this.Classrefreshbtn.Text = "Refresh";
             this.Classrefreshbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Classrefreshbtn.Click += new System.EventHandler(this.Classrefreshbtn_Click);
             // 
             // Classpribtn
             // 
