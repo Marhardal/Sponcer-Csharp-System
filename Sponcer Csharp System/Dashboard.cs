@@ -34,7 +34,7 @@ namespace Sponcer_Csharp_System
         {
             try
             {
-                if (connection.State == ConnectionState.Closed) 
+                if (connection.State == ConnectionState.Closed)
                 {
                     connection.Open();
                     string sql = "Select * from Sponser";
@@ -70,7 +70,7 @@ namespace Sponcer_Csharp_System
         {
             try
             {
-                if (connection.State == ConnectionState.Closed) 
+                if (connection.State == ConnectionState.Closed)
                 {
                     connection.Open();
                     string sql = "Select * from school";
@@ -102,12 +102,38 @@ namespace Sponcer_Csharp_System
             school();
         }
 
+        void lass()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string sql = "Select * from classes";
+                    com = new SqlCommand(sql, connection);
+                    SqlDataAdapter sqlData= new SqlDataAdapter(com);
+                    DataTable dt = new DataTable();
+                    sqlData.Fill(dt);
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        Classdgv.DataSource = dt;
+                    }
+                    sqlData.Dispose();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
         private void Classbtn_Click(object sender, EventArgs e)
         {
             Studentdgv.SetPage("Class");
             headinglbl.Text = "Sponcer System\\Class";
             Image img = System.Drawing.Image.FromFile(Application.StartupPath + @"\Icons\classroom_64px.png");
             Image.Image = img;
+            lass();
         }
 
         private void Studentbtn_Click(object sender, EventArgs e)
@@ -242,6 +268,56 @@ namespace Sponcer_Csharp_System
                     else
                     {
                         MessageBox.Show("Failed to delete school, Please try again later.");
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        private void Classinsbtn_Click(object sender, EventArgs e)
+        {
+            Upsert upsert = new Upsert();
+            Class lass= new Class();
+            lass.Location = new Point(0, 0);
+            lass.bunifuCustomLabel2.Text = "Create Class";
+            upsert.Controls.Add(lass);
+            upsert.Show();
+        }
+
+        private void Classupdbtn_Click(object sender, EventArgs e)
+        {
+            Upsert upsert = new Upsert();
+            Class lass = new Class();
+            lass.Location = new Point(0, 0);
+            lass.bunifuCustomLabel2.Text = "Update Class";
+            lass.nmtxt.Text = Classdgv.CurrentRow.Cells[2].Value.ToString();
+            lass.id = Classdgv.CurrentRow.Cells[0].Value.ToString();
+            upsert.Controls.Add(lass);
+            upsert.Show();
+        }
+
+        private void Classdelbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed) 
+                {
+                    connection.Open();
+                    string delete = "Delete from Classes where ID=@id";
+                    com=new SqlCommand(delete, connection);
+                    com.Parameters.Add(new SqlParameter("@id", Classdgv.CurrentRow.Cells[0].ToString()));
+                    var res = com.ExecuteNonQuery();
+                    if (res != 0)
+                    {
+                        MessageBox.Show("Class Deleted successfully!!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Class not deleted!! Please try again later.");
                     }
                     connection.Close();
                 }
