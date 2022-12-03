@@ -53,7 +53,7 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.Studentdgv = new Bunifu.UI.WinForms.BunifuPages();
+            this.Stud = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Sponcerrefrbtn = new Guna.UI.WinForms.GunaButton();
@@ -80,16 +80,16 @@
             this.Studentrefreshbtn = new Guna.UI.WinForms.GunaButton();
             this.Studentpribtn = new Guna.UI.WinForms.GunaButton();
             this.Studentdelbtn = new Guna.UI.WinForms.GunaButton();
-            this.bunifuCustomDataGrid4 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Studentupdbtn = new Guna.UI.WinForms.GunaButton();
             this.studentinsbtn = new Guna.UI.WinForms.GunaButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.studentdgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Image)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
-            this.Studentdgv.SuspendLayout();
+            this.Stud.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Sponcerdgv)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -97,7 +97,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Classdgv)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentdgv)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel2
@@ -375,27 +375,27 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1332, 127);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
-            // Studentdgv
+            // Stud
             // 
-            this.Studentdgv.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.Studentdgv.AllowTransitions = true;
-            this.Studentdgv.Controls.Add(this.tabPage1);
-            this.Studentdgv.Controls.Add(this.tabPage2);
-            this.Studentdgv.Controls.Add(this.tabPage3);
-            this.Studentdgv.Controls.Add(this.tabPage4);
-            this.Studentdgv.Controls.Add(this.tabPage5);
-            this.Studentdgv.Controls.Add(this.tabPage6);
-            this.Studentdgv.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Studentdgv.Location = new System.Drawing.Point(0, 258);
-            this.Studentdgv.Multiline = true;
-            this.Studentdgv.Name = "Studentdgv";
-            this.Studentdgv.Page = this.tabPage4;
-            this.Studentdgv.PageIndex = 3;
-            this.Studentdgv.PageName = "tabPage4";
-            this.Studentdgv.PageTitle = "Class";
-            this.Studentdgv.SelectedIndex = 0;
-            this.Studentdgv.Size = new System.Drawing.Size(1332, 535);
-            this.Studentdgv.TabIndex = 2;
+            this.Stud.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.Stud.AllowTransitions = true;
+            this.Stud.Controls.Add(this.tabPage1);
+            this.Stud.Controls.Add(this.tabPage2);
+            this.Stud.Controls.Add(this.tabPage3);
+            this.Stud.Controls.Add(this.tabPage4);
+            this.Stud.Controls.Add(this.tabPage5);
+            this.Stud.Controls.Add(this.tabPage6);
+            this.Stud.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Stud.Location = new System.Drawing.Point(0, 258);
+            this.Stud.Multiline = true;
+            this.Stud.Name = "Stud";
+            this.Stud.Page = this.tabPage5;
+            this.Stud.PageIndex = 4;
+            this.Stud.PageName = "tabPage5";
+            this.Stud.PageTitle = "Student";
+            this.Stud.SelectedIndex = 0;
+            this.Stud.Size = new System.Drawing.Size(1332, 535);
+            this.Stud.TabIndex = 2;
             animation1.AnimateOnlyDifferences = false;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
@@ -411,8 +411,8 @@
             animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
-            this.Studentdgv.Transition = animation1;
-            this.Studentdgv.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
+            this.Stud.Transition = animation1;
+            this.Stud.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // tabPage1
             // 
@@ -861,15 +861,18 @@
             // 
             // Classdgv
             // 
+            this.Classdgv.AllowUserToAddRows = false;
+            this.Classdgv.AllowUserToDeleteRows = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Classdgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.Classdgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Classdgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.Classdgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Classdgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.ForestGreen;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -877,13 +880,15 @@
             this.Classdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Classdgv.DoubleBuffered = true;
             this.Classdgv.EnableHeadersVisualStyles = false;
-            this.Classdgv.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.Classdgv.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.Classdgv.HeaderBgColor = System.Drawing.Color.ForestGreen;
+            this.Classdgv.HeaderForeColor = System.Drawing.Color.White;
             this.Classdgv.Location = new System.Drawing.Point(9, 53);
             this.Classdgv.Name = "Classdgv";
+            this.Classdgv.ReadOnly = true;
             this.Classdgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.Classdgv.RowHeadersWidth = 51;
             this.Classdgv.RowTemplate.Height = 24;
+            this.Classdgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Classdgv.Size = new System.Drawing.Size(1307, 462);
             this.Classdgv.TabIndex = 11;
             // 
@@ -942,7 +947,7 @@
             this.tabPage5.Controls.Add(this.Studentrefreshbtn);
             this.tabPage5.Controls.Add(this.Studentpribtn);
             this.tabPage5.Controls.Add(this.Studentdelbtn);
-            this.tabPage5.Controls.Add(this.bunifuCustomDataGrid4);
+            this.tabPage5.Controls.Add(this.studentdgv);
             this.tabPage5.Controls.Add(this.Studentupdbtn);
             this.tabPage5.Controls.Add(this.studentinsbtn);
             this.tabPage5.Location = new System.Drawing.Point(4, 4);
@@ -975,6 +980,7 @@
             this.Studentrefreshbtn.TabIndex = 16;
             this.Studentrefreshbtn.Text = "Refresh";
             this.Studentrefreshbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Studentrefreshbtn.Click += new System.EventHandler(this.Studentrefreshbtn_Click);
             // 
             // Studentpribtn
             // 
@@ -999,6 +1005,7 @@
             this.Studentpribtn.TabIndex = 15;
             this.Studentpribtn.Text = "Print";
             this.Studentpribtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Studentpribtn.Click += new System.EventHandler(this.Studentpribtn_Click);
             // 
             // Studentdelbtn
             // 
@@ -1023,34 +1030,7 @@
             this.Studentdelbtn.TabIndex = 12;
             this.Studentdelbtn.Text = "Delete";
             this.Studentdelbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // bunifuCustomDataGrid4
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.bunifuCustomDataGrid4.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCustomDataGrid4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.bunifuCustomDataGrid4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid4.DoubleBuffered = true;
-            this.bunifuCustomDataGrid4.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid4.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid4.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid4.Location = new System.Drawing.Point(9, 54);
-            this.bunifuCustomDataGrid4.Name = "bunifuCustomDataGrid4";
-            this.bunifuCustomDataGrid4.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid4.RowHeadersWidth = 51;
-            this.bunifuCustomDataGrid4.RowTemplate.Height = 24;
-            this.bunifuCustomDataGrid4.Size = new System.Drawing.Size(1307, 462);
-            this.bunifuCustomDataGrid4.TabIndex = 11;
+            this.Studentdelbtn.Click += new System.EventHandler(this.Studentdelbtn_Click);
             // 
             // Studentupdbtn
             // 
@@ -1075,6 +1055,7 @@
             this.Studentupdbtn.TabIndex = 13;
             this.Studentupdbtn.Text = "Update";
             this.Studentupdbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Studentupdbtn.Click += new System.EventHandler(this.Studentupdbtn_Click);
             // 
             // studentinsbtn
             // 
@@ -1110,12 +1091,45 @@
             this.tabPage6.Text = "Settings";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // studentdgv
+            // 
+            this.studentdgv.AllowUserToAddRows = false;
+            this.studentdgv.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.studentdgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.studentdgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.studentdgv.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.studentdgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.studentdgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentdgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.studentdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.studentdgv.DoubleBuffered = true;
+            this.studentdgv.EnableHeadersVisualStyles = false;
+            this.studentdgv.HeaderBgColor = System.Drawing.Color.ForestGreen;
+            this.studentdgv.HeaderForeColor = System.Drawing.Color.White;
+            this.studentdgv.Location = new System.Drawing.Point(9, 54);
+            this.studentdgv.Name = "studentdgv";
+            this.studentdgv.ReadOnly = true;
+            this.studentdgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.studentdgv.RowHeadersWidth = 51;
+            this.studentdgv.RowTemplate.Height = 24;
+            this.studentdgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.studentdgv.Size = new System.Drawing.Size(1307, 477);
+            this.studentdgv.TabIndex = 11;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1332, 793);
-            this.Controls.Add(this.Studentdgv);
+            this.Controls.Add(this.Stud);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1130,7 +1144,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            this.Studentdgv.ResumeLayout(false);
+            this.Stud.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Sponcerdgv)).EndInit();
             this.tabPage3.ResumeLayout(false);
@@ -1138,7 +1152,7 @@
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Classdgv)).EndInit();
             this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentdgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1157,7 +1171,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.Framework.UI.BunifuCustomLabel headinglbl;
-        private Bunifu.UI.WinForms.BunifuPages Studentdgv;
+        private Bunifu.UI.WinForms.BunifuPages Stud;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -1185,11 +1199,11 @@
         private Guna.UI.WinForms.GunaButton Studentrefreshbtn;
         private Guna.UI.WinForms.GunaButton Studentpribtn;
         private Guna.UI.WinForms.GunaButton Studentdelbtn;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid4;
         private Guna.UI.WinForms.GunaButton Studentupdbtn;
         private Guna.UI.WinForms.GunaButton studentinsbtn;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Guna.UI.WinForms.GunaPictureBox Image;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid studentdgv;
     }
 }
 
