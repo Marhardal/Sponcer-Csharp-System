@@ -190,8 +190,8 @@
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         internal Guna.UI.WinForms.GunaButton Updatebtn;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Bunifu.Framework.UI.BunifuDropdown nmcmd;
         internal Guna.UI.WinForms.GunaButton Insertbtn;
         internal Bunifu.Framework.UI.BunifuMaterialTextbox nmtxt;
+        internal Bunifu.Framework.UI.BunifuDropdown nmcmd;
     }
 }

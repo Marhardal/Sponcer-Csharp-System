@@ -64,6 +64,7 @@ namespace Sponcer_Csharp_System
                     {
                         sqlData.Read();
                         var id = sqlData[0].ToString();
+                        sqlData.Close();
                         string select = "select * from Classes where Class=@cla and School_id=@id;";
                         com = new SqlCommand(select, connection);
                         com.Parameters.Add(new SqlParameter("@cla", nmtxt.Text));
@@ -76,8 +77,9 @@ namespace Sponcer_Csharp_System
                         }
                         else
                         {
+                            MessageBox.Show(id);
                             sqlData.Close();
-                            string insert = "insert into classes values(@id, @cla, now());";
+                            string insert = "insert into classes values(@id, @cla, getdate());";
                             com= new SqlCommand(insert, connection);
                             com.Parameters.Add(new SqlParameter("@cla", nmtxt.Text));
                             com.Parameters.Add(new SqlParameter("@id", id));
