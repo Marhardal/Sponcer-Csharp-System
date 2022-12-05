@@ -16,5 +16,10 @@ namespace Sponcer_Csharp_System
         {
             InitializeComponent();
         }
+
+        private void bunifuSeparator4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

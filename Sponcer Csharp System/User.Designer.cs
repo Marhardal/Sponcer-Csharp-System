@@ -35,6 +35,7 @@
             this.usnmtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Insertbtn = new Guna.UI.WinForms.GunaButton();
             this.Login = new Guna.UI.WinForms.GunaButton();
+            this.updatebtn = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel3
@@ -171,19 +172,46 @@
             this.Login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Login.Click += new System.EventHandler(this.Login_Click);
             // 
+            // updatebtn
+            // 
+            this.updatebtn.AnimationHoverSpeed = 0.07F;
+            this.updatebtn.AnimationSpeed = 0.03F;
+            this.updatebtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.updatebtn.BorderColor = System.Drawing.Color.Black;
+            this.updatebtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.updatebtn.FocusedColor = System.Drawing.Color.Empty;
+            this.updatebtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatebtn.ForeColor = System.Drawing.Color.White;
+            this.updatebtn.Image = null;
+            this.updatebtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.updatebtn.Location = new System.Drawing.Point(132, 216);
+            this.updatebtn.Name = "updatebtn";
+            this.updatebtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.updatebtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.updatebtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.updatebtn.OnHoverImage = null;
+            this.updatebtn.OnPressedColor = System.Drawing.Color.Black;
+            this.updatebtn.Size = new System.Drawing.Size(160, 42);
+            this.updatebtn.TabIndex = 45;
+            this.updatebtn.Text = "Update";
+            this.updatebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 270);
-            this.Controls.Add(this.Login);
-            this.Controls.Add(this.Insertbtn);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.passtxt);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.usnmtxt);
+            this.Controls.Add(this.Login);
+            this.Controls.Add(this.Insertbtn);
+            this.Controls.Add(this.updatebtn);
             this.Name = "User";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,11 +221,12 @@
         #endregion
 
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox passtxt;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox usnmtxt;
         internal Guna.UI.WinForms.GunaButton Insertbtn;
         internal Guna.UI.WinForms.GunaButton Login;
+        internal Guna.UI.WinForms.GunaButton updatebtn;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox passtxt;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox usnmtxt;
     }
 }
