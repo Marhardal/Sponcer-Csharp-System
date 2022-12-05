@@ -173,6 +173,7 @@ namespace Sponcer_Csharp_System
 
         private void Settingsbtn_Click(object sender, EventArgs e)
         {
+            Profile();
             Stud.SetPage("Settings");
             headinglbl.Text = "Sponcer System\\Settings";
             Image img = System.Drawing.Image.FromFile(Application.StartupPath + @"\Icons\settings_48px.png");
@@ -412,6 +413,153 @@ namespace Sponcer_Csharp_System
         {
             student();
             studentdgv.Refresh();
+        }
+
+        internal string id;
+
+        void Profile()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string select = "Select * from users where Username=@usnm";
+                    com = new SqlCommand(select, connection);
+                    com.Parameters.Add(new SqlParameter("usnm", usnmtxt.Text));
+                    SqlDataReader sqlData= com.ExecuteReader();
+                    if (sqlData.HasRows)
+                    {
+                        sqlData.Read();
+                        id = sqlData[0].ToString();
+                        usnmlbl.Text = sqlData[1].ToString();
+                        passlbl.Text = sqlData[2].ToString();
+                    }
+                    sqlData.Close();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        private void profbtn_Click(object sender, EventArgs e)
+        {
+            Profile();
+            sett.SetPage("Profile");
+        }
+
+        private void aboutbtn_Click(object sender, EventArgs e)
+        {
+            sett.SetPage("About");
+        }
+
+        void Users()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string select = "Select * from users";
+                    com=new SqlCommand(select, connection);
+                    SqlDataAdapter sqlData= new SqlDataAdapter(com);
+                    DataTable dataTable= new DataTable();
+                    sqlData.Fill(dataTable);
+                    for (int i = 0; i < dataTable.Rows.Count; i++)
+                    {
+                        userdgv.DataSource = dataTable;
+                    }
+                    dataTable.Dispose();
+                    sqlData.Dispose();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        void usrcount()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string select = "select count(*) from Users";
+                    com=new SqlCommand(select, connection);
+                    SqlDataReader sqlData=com.ExecuteReader();
+                    if (sqlData.HasRows)
+                    {
+                        sqlData.Read();
+                        usrcntlbl.Text = sqlData[0].ToString() + "Users have regidtered and use this system.";
+                    }
+                    sqlData.Close();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        private void usrbtn_Click(object sender, EventArgs e)
+        {
+            Users();
+            usrcount();
+            sett.SetPage("Users");
+        }
+
+        private void compbtn_Click(object sender, EventArgs e)
+        {
+            sett.SetPage("Company");
+        }
+
+        private void bakbtn_Click(object sender, EventArgs e)
+        {
+            sett.SetPage("Backup");
+        }
+
+        private void usrinsbtn_Click(object sender, EventArgs e)
+        {
+            User user= new User();
+            user.Insertbtn.BringToFront();
+            user.Show();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            User.usnm = usnmtxt.Text;
+        }
+
+        private void usrupdbtn_Click(object sender, EventArgs e)
+        {
+            User user=new User();
+            user.updatebtn.BringToFront();
+            user.id = id;
+            user.usnmtxt.Text = usnmtxt.Text;
+            user.passtxt.Text = passlbl.Text;
+            user.Show();
+        }
+
+        private void gunaButton1_Click_1(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Are you sure that you want logout.", "Note", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Application.Restart();
+            }
+        }
+
+        private void nextbtn_Click(object sender, EventArgs e)
+        {
+            Users();
+            sett.SetPage("users");
         }
     }
 }
