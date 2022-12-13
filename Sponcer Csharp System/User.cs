@@ -82,6 +82,7 @@ namespace Sponcer_Csharp_System
                     SqlDataReader sqlData = com.ExecuteReader();
                     if (sqlData.HasRows)
                     {
+                        sqlData.Read();
                         usnm = usnmtxt.Text;
                         Dashboard dashboard= new Dashboard();
                         dashboard.usnmtxt.Text=usnmtxt.Text;
@@ -98,7 +99,7 @@ namespace Sponcer_Csharp_System
             }
             catch (Exception er)
             {
-                MessageBox.Show(er.Message);
+                MessageBox.Show("Login error " + er.Message);
             }
         }
 

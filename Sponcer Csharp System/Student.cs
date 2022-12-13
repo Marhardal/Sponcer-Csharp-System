@@ -118,8 +118,10 @@ namespace Sponcer_Csharp_System
                     SqlDataReader sqlData = com.ExecuteReader();
                     if (sqlData.HasRows)
                     {
-                        sqlData.Read();
-                        schcmb.Items.Add(sqlData[1].ToString());
+                        while (sqlData.Read())
+                        {
+                            schcmb.Items.Add(sqlData[1].ToString());
+                        }
                     }
                     sqlData.Close();
                     connection.Close();
@@ -143,8 +145,10 @@ namespace Sponcer_Csharp_System
                     SqlDataReader sqlData = com.ExecuteReader();
                     if (sqlData.HasRows)
                     {
-                        sqlData.Read();
-                        clacmd.Items.Add(sqlData[2].ToString());
+                        while (sqlData.Read())
+                        {
+                            clacmd.Items.Add(sqlData[2].ToString()); 
+                        }
                     }
                     sqlData.Close();
                     connection.Close();
@@ -168,8 +172,10 @@ namespace Sponcer_Csharp_System
                     SqlDataReader sqlData = com.ExecuteReader();
                     if (sqlData.HasRows)
                     {
-                        sqlData.Read();
-                        spcrcmd.Items.Add(sqlData[1].ToString());
+                        while (sqlData.Read())
+                        {
+                            spcrcmd.Items.Add(sqlData[1].ToString()); 
+                        }
                     }
                     sqlData.Close();
                     connection.Close();
@@ -210,8 +216,10 @@ namespace Sponcer_Csharp_System
                         sqlData = com.ExecuteReader();
                         if (sqlData.HasRows)
                         {
-                            sqlData.Read();
-                            clacmd.Items.Add(sqlData[2].ToString());
+                            while (sqlData.Read())
+                            {
+                                clacmd.Items.Add(sqlData[2].ToString());
+                            }
                         }
                         sqlData.Close();
                     }
@@ -279,6 +287,11 @@ namespace Sponcer_Csharp_System
             {
                 MessageBox.Show(er.Message);
             }
+        }
+
+        private void schcmb_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
