@@ -330,6 +330,7 @@
             this.schcmb.Size = new System.Drawing.Size(426, 41);
             this.schcmb.TabIndex = 47;
             this.schcmb.onItemSelected += new System.EventHandler(this.schcmb_onItemSelected);
+            this.schcmb.Load += new System.EventHandler(this.schcmb_Load);
             // 
             // spcrcmd
             // 

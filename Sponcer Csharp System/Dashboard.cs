@@ -5,10 +5,12 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Sponcer_Csharp_System
 {
@@ -119,6 +121,7 @@ namespace Sponcer_Csharp_System
                         Classdgv.DataSource = dt;
                     }
                     sqlData.Dispose();
+                    dt.Dispose();
                     connection.Close();
                 }
             }
@@ -232,7 +235,7 @@ namespace Sponcer_Csharp_System
                 if (connection.State == ConnectionState.Closed) 
                 {
                     connection.Open();
-                    string sql = "Delete from Sponcer Where ID='" + id + "'";
+                    string sql = "Delete from Sponser Where ID='" + id + "'";
                     com = new SqlCommand(sql, connection);
                     var res = com.ExecuteNonQuery();
                     if (res > 0)
@@ -243,6 +246,7 @@ namespace Sponcer_Csharp_System
                     {
                         MessageBox.Show("Sponcer Not Deleted. Please try again later.");
                     }
+                    connection.Close();
                 }
             }
             catch (Exception er)
@@ -515,9 +519,30 @@ namespace Sponcer_Csharp_System
             sett.SetPage("Users");
         }
 
+        void read()
+        {
+            try
+            {
+                string about = "./CompanyInfo.txt";
+                if (File.Exists(about))
+                {
+                    nmtxt.Text = File.ReadLines(about).ElementAtOrDefault(0);
+                    loctxt.Text = File.ReadLines(about).ElementAtOrDefault(1);
+                    postxt.Text = File.ReadLines(about).ElementAtOrDefault(2);
+                    phnotxt.Text = File.ReadLines(about).ElementAtOrDefault(3);
+                    imgtxt.Text = File.ReadLines(about).ElementAtOrDefault(4);
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
         private void compbtn_Click(object sender, EventArgs e)
         {
             sett.SetPage("Company");
+            read();
         }
 
         private void bakbtn_Click(object sender, EventArgs e)
@@ -532,10 +557,219 @@ namespace Sponcer_Csharp_System
             user.Show();
         }
 
+        void cntspncr()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string select = "select count(*) as Sponcers from Sponser;";
+                    com=new SqlCommand(select, connection);
+                    SqlDataReader sqlData= com.ExecuteReader();
+                    if (sqlData.HasRows)
+                    {
+                        sqlData.Read();
+                        spncrlbl.Text = sqlData[0].ToString() + " sponcers are registered and sponcering many students.";
+                    }
+                    sqlData.Close();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Failed to count sponcers " + er.Message);
+            }
+        }
+
+        void cntschl()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string select = "select count(*) from school";
+                    com=new SqlCommand(select, connection);
+                    SqlDataReader sqlData= com.ExecuteReader();
+                    if (sqlData.HasRows)
+                    {
+                        sqlData.Read();
+                        cntschlbl.Text = sqlData[0].ToString() + " schools have students sponced by us.";
+                    }
+                    sqlData.Close();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        int stdnt;
+        void cntstdnt()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string select = "Select count(*) from student";
+                    com=new SqlCommand(select, connection);
+                    SqlDataReader sqlData= com.ExecuteReader();
+                    if (sqlData.HasRows)
+                    {
+                        sqlData.Read();
+                        cntstdntlbl.Text = sqlData[0].ToString() + " students have been registed.";
+                        stdnt = Convert.ToInt32(sqlData[0].ToString());
+                    }
+                    sqlData.Close();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        void piechart()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string select = "select top 4 spo.Name, COUNT(stu.ID) as [Total Students] from Student as stu, Sponser as spo where stu.[Sponser ID]=spo.ID GROUP BY spo.Name ";
+                    com=new SqlCommand(select, connection);
+                    SqlDataAdapter sqlData = new SqlDataAdapter(com);
+                    DataSet set = new DataSet();
+                    sqlData.Fill(set);
+                    chart1.DataSource = set;
+                    chart1.Series[0].XValueMember = "Name";
+                    chart1.Series[0].YValueMembers = "Total Students";
+                    chart1.Series[0].ChartType = SeriesChartType.Pie;
+                    chart1.Titles.Add("Sponcer's with Total students sponcered.");
+                    chart1.Series[0].IsValueShownAsLabel = true;
+                    sqlData.Dispose();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            cntspncr();
+            cntschl();
+            cntstdnt();
+            cntpri();
+            cntcol();
+            cntsec();
+            timer1.Start();
             User.usnm = usnmtxt.Text;
+            nmlbl.Text = File.ReadLines("./Companyinfo.txt").First();
+            string path = File.ReadLines("./Companyinfo.txt").ElementAtOrDefault(4);
+            Image img = System.Drawing.Image.FromFile(path);
+            logo.Image = img;
+            Primarybar.Minimum = 0;
+            Primarybar.Maximum = stdnt;
+            Primarybar.Value = Convert.ToInt32(primary);
+            Secondarybar.Minimum = 0;
+            Secondarybar.Maximum = stdnt;
+            Secondarybar.Value = Convert.ToInt32(secondary);
+            Collegebar.Minimum = 0;
+            Collegebar.Maximum = stdnt;
+            Collegebar.Value = Convert.ToInt32(college);
+            primarylbl.Text = "Out of " + stdnt + ", a total of " + primary + " are primary school students.";
+            Secondarylbl.Text = "Out of " + stdnt + ", a total of " + secondary + " are secondary school students.";
+            Tertiallylbl.Text = "Out of " + stdnt + ", a total of " + college + " are tertially students.";
+            piechart();
         }
+
+        string primary;
+        string secondary;
+        string college;
+
+        void cntpri()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string select = "select COUNT(*) from Student as stu, School xul where stu.[School ID]=xul.ID and xul.Faculty='Primary';";
+                    com=new SqlCommand(select, connection);
+                    SqlDataReader sqlData= com.ExecuteReader();
+                    if (sqlData.HasRows)
+                    {
+                        sqlData.Read();
+                        primary = sqlData[0].ToString();
+                    }
+                    sqlData.Close();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        void cntsec()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string select = "select COUNT(*) from Student as stu, School xul where stu.[School ID]=xul.ID and xul.Faculty='Secondary';";
+                    com = new SqlCommand(select, connection);
+                    SqlDataReader sqlData = com.ExecuteReader();
+                    if (sqlData.HasRows)
+                    {
+                        sqlData.Read();
+                        secondary = sqlData[0].ToString();
+                    }
+                    sqlData.Close();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        void cntcol()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string select = "select COUNT(*) from Student as stu, School xul where stu.[School ID]=xul.ID and xul.Faculty='Tertially';";
+                    com = new SqlCommand(select, connection);
+                    SqlDataReader sqlData = com.ExecuteReader();
+                    if (sqlData.HasRows)
+                    {
+                        sqlData.Read();
+                        college = sqlData[0].ToString();
+                    }
+                    sqlData.Close();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
 
         private void usrupdbtn_Click(object sender, EventArgs e)
         {
@@ -560,6 +794,162 @@ namespace Sponcer_Csharp_System
         {
             Users();
             sett.SetPage("users");
+        }
+
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bakbrowbtn_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folder=new FolderBrowserDialog();
+            if (folder.ShowDialog() == DialogResult.OK)
+            {
+                backuptxt.Text = folder.SelectedPath;
+            }
+        }
+
+        private void bakupbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string database = connection.Database.ToString();
+                if (backuptxt.Text == "")
+                {
+                    MessageBox.Show("Please make sure you select a location to save the backup file.");
+                }
+                else
+                {
+                    string name = "BACKUP DATABASE [" + database + "] TO DISK = '" + backuptxt.Text + "\\" + "sponcer_database" + "_" + DateTime.Now.ToString("yyyy-M-dd--HH-mm-ss") + ".bak'";
+                    connection.Open();
+                    com = new SqlCommand(name, connection);
+                    var res = com.ExecuteNonQuery();
+                    if (res > 0)
+                    {
+                        MessageBox.Show("Backup created successfuly.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Backup failed. Please try again later.");
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        private void resbrobtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFile = new OpenFileDialog();
+                openFile.AddExtension = true;
+                openFile.Filter = "Backup file (*.bak)|*.bak";
+                openFile.Title = "Select Backup File to Restore.";
+                if (openFile.ShowDialog() == DialogResult.OK)
+                {
+                    restxt.Text = openFile.FileName;
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        private void restbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string database = connection.Database.ToString();
+                    string alter = string.Format("ALTER DATABASE [" + database + "] SET SINGLE_USER WITH ROLLBACK IMMEDIATE");
+                    com = new SqlCommand(alter, connection);
+                    com.ExecuteNonQuery();
+                    string use = "USE MASTER RESTORE DATABASE [" + database + "] FROM DISK='" + restxt.Text + "' WITH REPLACE;";
+                    com = new SqlCommand(use, connection);
+                    com.ExecuteNonQuery();
+                    string alter1 = string.Format("ALTER DATABASE [" + database + "] SET MULTI_USER");
+                    com = new SqlCommand(alter1, connection);
+                    var res2 = com.ExecuteNonQuery();
+                    if (res2 > 0)
+                    {
+                        MessageBox.Show("Database restored successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Database not restored.");
+                    }
+
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string about = "./CompanyInfo.txt";
+                if (File.Exists(about))
+                {
+                    //StreamWriter writer = new StreamWriter(about);
+                    string[] lines = new string[5];
+                    lines[0] = nmtxt.Text;
+                    lines[1] = postxt.Text;
+                    lines[2] = loctxt.Text;
+                    lines[3] = phnotxt.Text;
+                    lines[4] = imgtxt.Text;
+                    File.WriteAllLines(about, lines);
+                    //writer.Write(lines);
+                    //writer.Close();
+                    MessageBox.Show("File Exist");
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+        
+
+        private void slctbtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "PNG Files(*.png)|*.png|JPEG Files(*.jpeg)|*.jpeg";
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                imgtxt.Text = openFile.FileName;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                Primarybar.Value = Convert.ToInt32(primary);
+                Secondarybar.Value = Convert.ToInt32(secondary);
+                Collegebar.Value = Convert.ToInt32(college);
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
         }
     }
 }
