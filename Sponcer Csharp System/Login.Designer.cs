@@ -1,6 +1,6 @@
 ﻿namespace Sponcer_Csharp_System
 {
-    partial class User
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -33,9 +33,7 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.usnmtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.Insertbtn = new Guna.UI.WinForms.GunaButton();
-            this.Login = new Guna.UI.WinForms.GunaButton();
-            this.updatebtn = new Guna.UI.WinForms.GunaButton();
+            this.loginbtn = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel3
@@ -44,12 +42,11 @@
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(9, 134);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(5, 124);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(102, 28);
-            this.bunifuCustomLabel3.TabIndex = 34;
+            this.bunifuCustomLabel3.TabIndex = 50;
             this.bunifuCustomLabel3.Text = "Password";
-            this.bunifuCustomLabel3.Click += new System.EventHandler(this.bunifuCustomLabel3_Click);
             // 
             // passtxt
             // 
@@ -67,14 +64,13 @@
             this.passtxt.LineIdleColor = System.Drawing.Color.Gray;
             this.passtxt.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.passtxt.LineThickness = 3;
-            this.passtxt.Location = new System.Drawing.Point(9, 168);
+            this.passtxt.Location = new System.Drawing.Point(5, 158);
             this.passtxt.Margin = new System.Windows.Forms.Padding(4);
             this.passtxt.MaxLength = 32767;
             this.passtxt.Name = "passtxt";
             this.passtxt.Size = new System.Drawing.Size(426, 41);
-            this.passtxt.TabIndex = 33;
+            this.passtxt.TabIndex = 49;
             this.passtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.passtxt.OnValueChanged += new System.EventHandler(this.passtxt_OnValueChanged);
             // 
             // bunifuCustomLabel1
             // 
@@ -82,12 +78,11 @@
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(9, 53);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(5, 43);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(107, 28);
-            this.bunifuCustomLabel1.TabIndex = 32;
+            this.bunifuCustomLabel1.TabIndex = 48;
             this.bunifuCustomLabel1.Text = "Username";
-            this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -95,12 +90,11 @@
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Historic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(108, 9);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(104, -1);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(198, 38);
-            this.bunifuCustomLabel2.TabIndex = 31;
+            this.bunifuCustomLabel2.TabIndex = 47;
             this.bunifuCustomLabel2.Text = "Enter Student";
-            this.bunifuCustomLabel2.Click += new System.EventHandler(this.bunifuCustomLabel2_Click);
             // 
             // usnmtxt
             // 
@@ -118,106 +112,54 @@
             this.usnmtxt.LineIdleColor = System.Drawing.Color.Gray;
             this.usnmtxt.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.usnmtxt.LineThickness = 3;
-            this.usnmtxt.Location = new System.Drawing.Point(9, 87);
+            this.usnmtxt.Location = new System.Drawing.Point(5, 77);
             this.usnmtxt.Margin = new System.Windows.Forms.Padding(4);
             this.usnmtxt.MaxLength = 32767;
             this.usnmtxt.Name = "usnmtxt";
             this.usnmtxt.Size = new System.Drawing.Size(426, 41);
-            this.usnmtxt.TabIndex = 30;
+            this.usnmtxt.TabIndex = 46;
             this.usnmtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.usnmtxt.OnValueChanged += new System.EventHandler(this.usnmtxt_OnValueChanged);
             // 
-            // Insertbtn
+            // loginbtn
             // 
-            this.Insertbtn.AnimationHoverSpeed = 0.07F;
-            this.Insertbtn.AnimationSpeed = 0.03F;
-            this.Insertbtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.Insertbtn.BorderColor = System.Drawing.Color.Black;
-            this.Insertbtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.Insertbtn.FocusedColor = System.Drawing.Color.Empty;
-            this.Insertbtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Insertbtn.ForeColor = System.Drawing.Color.White;
-            this.Insertbtn.Image = null;
-            this.Insertbtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.Insertbtn.Location = new System.Drawing.Point(132, 216);
-            this.Insertbtn.Name = "Insertbtn";
-            this.Insertbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.Insertbtn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.Insertbtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.Insertbtn.OnHoverImage = null;
-            this.Insertbtn.OnPressedColor = System.Drawing.Color.Black;
-            this.Insertbtn.Size = new System.Drawing.Size(160, 42);
-            this.Insertbtn.TabIndex = 43;
-            this.Insertbtn.Text = "Register";
-            this.Insertbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Insertbtn.Click += new System.EventHandler(this.Insertbtn_Click);
+            this.loginbtn.AnimationHoverSpeed = 0.07F;
+            this.loginbtn.AnimationSpeed = 0.03F;
+            this.loginbtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.loginbtn.BorderColor = System.Drawing.Color.Black;
+            this.loginbtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.loginbtn.FocusedColor = System.Drawing.Color.Empty;
+            this.loginbtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginbtn.ForeColor = System.Drawing.Color.White;
+            this.loginbtn.Image = null;
+            this.loginbtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.loginbtn.Location = new System.Drawing.Point(142, 206);
+            this.loginbtn.Name = "loginbtn";
+            this.loginbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.loginbtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.loginbtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.loginbtn.OnHoverImage = null;
+            this.loginbtn.OnPressedColor = System.Drawing.Color.Black;
+            this.loginbtn.Size = new System.Drawing.Size(160, 42);
+            this.loginbtn.TabIndex = 52;
+            this.loginbtn.Text = "Login";
+            this.loginbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
             // 
             // Login
             // 
-            this.Login.AnimationHoverSpeed = 0.07F;
-            this.Login.AnimationSpeed = 0.03F;
-            this.Login.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.Login.BorderColor = System.Drawing.Color.Black;
-            this.Login.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.Login.FocusedColor = System.Drawing.Color.Empty;
-            this.Login.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login.ForeColor = System.Drawing.Color.White;
-            this.Login.Image = null;
-            this.Login.ImageSize = new System.Drawing.Size(20, 20);
-            this.Login.Location = new System.Drawing.Point(132, 216);
-            this.Login.Name = "Login";
-            this.Login.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.Login.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.Login.OnHoverForeColor = System.Drawing.Color.White;
-            this.Login.OnHoverImage = null;
-            this.Login.OnPressedColor = System.Drawing.Color.Black;
-            this.Login.Size = new System.Drawing.Size(160, 42);
-            this.Login.TabIndex = 44;
-            this.Login.Text = "Login";
-            this.Login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Login.Click += new System.EventHandler(this.Login_Click);
-            // 
-            // updatebtn
-            // 
-            this.updatebtn.AnimationHoverSpeed = 0.07F;
-            this.updatebtn.AnimationSpeed = 0.03F;
-            this.updatebtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.updatebtn.BorderColor = System.Drawing.Color.Black;
-            this.updatebtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.updatebtn.FocusedColor = System.Drawing.Color.Empty;
-            this.updatebtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updatebtn.ForeColor = System.Drawing.Color.White;
-            this.updatebtn.Image = null;
-            this.updatebtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.updatebtn.Location = new System.Drawing.Point(132, 216);
-            this.updatebtn.Name = "updatebtn";
-            this.updatebtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.updatebtn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.updatebtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.updatebtn.OnHoverImage = null;
-            this.updatebtn.OnPressedColor = System.Drawing.Color.Black;
-            this.updatebtn.Size = new System.Drawing.Size(160, 42);
-            this.updatebtn.TabIndex = 45;
-            this.updatebtn.Text = "Update";
-            this.updatebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
-            // 
-            // User
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 270);
+            this.ClientSize = new System.Drawing.Size(443, 256);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.passtxt);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.usnmtxt);
-            this.Controls.Add(this.Login);
-            this.Controls.Add(this.Insertbtn);
-            this.Controls.Add(this.updatebtn);
-            this.Name = "User";
+            this.Controls.Add(this.loginbtn);
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "User";
+            this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,12 +168,10 @@
         #endregion
 
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox passtxt;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         internal Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        internal Guna.UI.WinForms.GunaButton Insertbtn;
-        internal Guna.UI.WinForms.GunaButton Login;
-        internal Guna.UI.WinForms.GunaButton updatebtn;
-        internal Bunifu.Framework.UI.BunifuMaterialTextbox passtxt;
         internal Bunifu.Framework.UI.BunifuMaterialTextbox usnmtxt;
+        internal Guna.UI.WinForms.GunaButton loginbtn;
     }
 }

@@ -144,6 +144,7 @@
             this.Controls.Add(this.Updatebtn);
             this.Name = "Sponcer";
             this.Size = new System.Drawing.Size(434, 191);
+            this.Load += new System.EventHandler(this.Sponcer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

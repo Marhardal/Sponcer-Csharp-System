@@ -22,6 +22,18 @@ namespace Sponcer_Csharp_System
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ToString());
         SqlCommand com = new SqlCommand();
 
+        internal static string uid;
+
+        void activity()
+        {
+            string insert = "insert into activities values(@id, @act, @tm, getdate());";
+            com = new SqlCommand(insert, connection);
+            com.Parameters.Add(new SqlParameter("@id", uid));
+            com.Parameters.Add(new SqlParameter("@act", "User Created a new School."));
+            com.Parameters.Add(new SqlParameter("@tm", DateTime.Now.ToString("HH:mm:ss")));
+            com.ExecuteNonQuery();
+        }
+
         private void Insertbtn_Click(object sender, EventArgs e)
         {
             try
@@ -60,6 +72,7 @@ namespace Sponcer_Csharp_System
                             if (res != 0)
                             {
                                 Hide();
+                                activity();
                                 Parent.Hide();
                                 MessageBox.Show("School created successfully!! Please Refresh the grid");
                             }
@@ -84,6 +97,16 @@ namespace Sponcer_Csharp_System
 
         internal string id;
 
+        void act()
+        {
+            string insert = "insert into activities values(@id, @act, @tm, getdate());";
+            com = new SqlCommand(insert, connection);
+            com.Parameters.Add(new SqlParameter("@id", uid));
+            com.Parameters.Add(new SqlParameter("@act", "User updated a School."));
+            com.Parameters.Add(new SqlParameter("@tm", DateTime.Now.ToString("HH:mm:ss")));
+            com.ExecuteNonQuery();
+        }
+
         private void Updatebtn_Click(object sender, EventArgs e)
         {
             try
@@ -103,6 +126,7 @@ namespace Sponcer_Csharp_System
                     var res = com.ExecuteNonQuery();
                     if (res > 0)
                     {
+                        act();
                         Hide();
                         Parent.Hide();
                         MessageBox.Show("School Updated Successfully!! Please Refresh the grid to see the changes");
@@ -118,6 +142,11 @@ namespace Sponcer_Csharp_System
             {
                 MessageBox.Show(er.Message);
             }
+        }
+
+        private void School_Load(object sender, EventArgs e)
+        {
+            Dashboard.uid = uid;
         }
     }
 }

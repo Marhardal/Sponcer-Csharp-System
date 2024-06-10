@@ -174,11 +174,39 @@ namespace Sponcer_Csharp_System
             student();
         }
 
+        void activity()
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                    string sql = "select act.ID, usr.Username, act.Activities, act.Time, act.Date from Activities as act, Users as usr where act.User_ID=usr.ID order by ID desc;";
+                    com = new SqlCommand(sql, connection);
+                    SqlDataAdapter sqlData = new SqlDataAdapter(com);
+                    DataTable dt = new DataTable();
+                    sqlData.Fill(dt);
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        actdgv.DataSource = dt;
+                    }
+                    sqlData.Dispose();
+                    dt.Dispose();
+                    connection.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
         private void Settingsbtn_Click(object sender, EventArgs e)
         {
+            activity();
             Profile();
             Stud.SetPage("Settings");
-            headinglbl.Text = "Sponcer System\\Settings";
+            headinglbl.Text = "Sponsor System\\Settings";
             Image img = System.Drawing.Image.FromFile(Application.StartupPath + @"\Icons\settings_48px.png");
             Image.Image = img;
         }
@@ -196,6 +224,7 @@ namespace Sponcer_Csharp_System
         private void studentinsbtn_Click(object sender, EventArgs e)
         {
             Upsert upsert = new Upsert();
+            Student.uid = uid;
             Student student = new Student();
             student.Location = new Point(0, 0);
             student.Insertbtn.BringToFront();
@@ -207,7 +236,9 @@ namespace Sponcer_Csharp_System
         private void Sponcerinsbtn_Click(object sender, EventArgs e)
         {
             Upsert upsert = new Upsert();
+            Student.uid = uid;
             Sponcer sponcer = new Sponcer();
+            Sponcer.uid = uid;
             sponcer.Location = new Point(0, 170);
             sponcer.Insertbtn.BringToFront();
             sponcer.bunifuCustomLabel2.Text = "Create Sponcer";
@@ -218,6 +249,7 @@ namespace Sponcer_Csharp_System
         private void Sponcerupdbtn_Click(object sender, EventArgs e)
         {
             Upsert upsert = new Upsert();
+            Sponcer.uid=uid;
             Sponcer sponcer = new Sponcer();
             sponcer.Location = new Point(0, 170);
             sponcer.Updatebtn.BringToFront();
@@ -241,6 +273,12 @@ namespace Sponcer_Csharp_System
                     if (res > 0)
                     {
                         MessageBox.Show("Sponcer Deleted!! Please refresh the grid.");
+                        string insert = "insert into activities values(@id, @act, @tm, getdate());";
+                        com = new SqlCommand(insert, connection);
+                        com.Parameters.Add(new SqlParameter("@id", uid));
+                        com.Parameters.Add(new SqlParameter("@act", "Deleted a Sponcer."));
+                        com.Parameters.Add(new SqlParameter("@tm", DateTime.Now.ToString("HH:mm:ss")));
+                        com.ExecuteNonQuery();
                     }
                     else
                     {
@@ -267,6 +305,7 @@ namespace Sponcer_Csharp_System
             School school = new School();
             school.Location = new Point(0, 0);
             school.bunifuCustomLabel2.Text = "Create School";
+            School.uid = uid;
             upsert.Controls.Add(school);
             upsert.Show();
         }
@@ -275,6 +314,7 @@ namespace Sponcer_Csharp_System
         {
             Upsert upsert = new Upsert();
             School school = new School();
+            School.uid = uid;
             school.Location = new Point(Left, Top);
             school.bunifuCustomLabel2.Text = "Update School";
             school.nmtxt.Text = Schooldgv.CurrentRow.Cells[1].Value.ToString();
@@ -287,6 +327,8 @@ namespace Sponcer_Csharp_System
             upsert.Controls.Add(school);
             upsert.Show();
         }
+
+
 
         private void Schooldelbtn_Click(object sender, EventArgs e)
         {
@@ -301,6 +343,12 @@ namespace Sponcer_Csharp_System
                     var res = com.ExecuteNonQuery();
                     if (res > 0)
                     {
+                        string insert = "insert into activities values(@id, @act, @tm, getdate());";
+                        com = new SqlCommand(insert, connection);
+                        com.Parameters.Add(new SqlParameter("@id", uid));
+                        com.Parameters.Add(new SqlParameter("@act", "Deleted a School"));
+                        com.Parameters.Add(new SqlParameter("@tm", DateTime.Now.ToString("HH:mm:ss")));
+                        com.ExecuteNonQuery();
                         MessageBox.Show("School Deleted Successfully.");
                     }
                     else
@@ -319,6 +367,7 @@ namespace Sponcer_Csharp_System
         private void Classinsbtn_Click(object sender, EventArgs e)
         {
             Upsert upsert = new Upsert();
+            Class.uid=uid;
             Class lass= new Class();
             lass.Location = new Point(0, 0);
             lass.bunifuCustomLabel2.Text = "Create Class";
@@ -330,6 +379,7 @@ namespace Sponcer_Csharp_System
         private void Classupdbtn_Click(object sender, EventArgs e)
         {
             Upsert upsert = new Upsert();
+            Class.uid = uid;
             Class lass = new Class();
             lass.Location = new Point(0, 0);
             lass.bunifuCustomLabel2.Text = "Update Class";
@@ -354,6 +404,12 @@ namespace Sponcer_Csharp_System
                     var res = com.ExecuteNonQuery();
                     if (res != 0)
                     {
+                        string insert = "insert into activities values(@id, @act, @tm, getdate());";
+                        com = new SqlCommand(insert, connection);
+                        com.Parameters.Add(new SqlParameter("@id", uid));
+                        com.Parameters.Add(new SqlParameter("@act", "Deleted a Class"));
+                        com.Parameters.Add(new SqlParameter("@tm", DateTime.Now.ToString("HH:mm:ss")));
+                        com.ExecuteNonQuery();
                         MessageBox.Show("Class Deleted successfully!!");
                     }
                     else
@@ -394,10 +450,17 @@ namespace Sponcer_Csharp_System
                     connection.Open();
                     string delete = "Delete from student where ID=@id";
                     com=new SqlCommand(delete, connection);
-                    com.Parameters[0].Value = studentdgv.CurrentRow.Cells[0].Value.ToString();
+                    string id = studentdgv.CurrentRow.Cells[0].Value.ToString();
+                    com.Parameters.Add(new SqlParameter("@id", id));
                     var res = com.ExecuteNonQuery();
                     if (res > 0)
                     {
+                        string insert = "insert into activities values(@id, @act, @tm, getdate());";
+                        com = new SqlCommand(insert, connection);
+                        com.Parameters.Add(new SqlParameter("@id", uid));
+                        com.Parameters.Add(new SqlParameter("@act", "Deleted a Student."));
+                        com.Parameters.Add(new SqlParameter("@tm", DateTime.Now.ToString("HH:mm:ss")));
+                        com.ExecuteNonQuery();
                         MessageBox.Show("Student Deleted successfully!! Please refresh the Grid.");
                     }
                     else
@@ -451,6 +514,7 @@ namespace Sponcer_Csharp_System
 
         private void profbtn_Click(object sender, EventArgs e)
         {
+            activity();
             Profile();
             sett.SetPage("Profile");
         }
@@ -570,7 +634,7 @@ namespace Sponcer_Csharp_System
                     if (sqlData.HasRows)
                     {
                         sqlData.Read();
-                        spncrlbl.Text = sqlData[0].ToString() + " sponcers are registered and sponcering many students.";
+                        spncrlbl.Text = sqlData[0].ToString() + " sponsors created and sponsors students.";
                     }
                     sqlData.Close();
                     connection.Close();
@@ -595,7 +659,7 @@ namespace Sponcer_Csharp_System
                     if (sqlData.HasRows)
                     {
                         sqlData.Read();
-                        cntschlbl.Text = sqlData[0].ToString() + " schools have students sponced by us.";
+                        cntschlbl.Text = sqlData[0].ToString() + " schools are created.";
                     }
                     sqlData.Close();
                     connection.Close();
@@ -621,7 +685,7 @@ namespace Sponcer_Csharp_System
                     if (sqlData.HasRows)
                     {
                         sqlData.Read();
-                        cntstdntlbl.Text = sqlData[0].ToString() + " students have been registed.";
+                        cntstdntlbl.Text = sqlData[0].ToString() + " students have been created and earned to different schools.";
                         stdnt = Convert.ToInt32(sqlData[0].ToString());
                     }
                     sqlData.Close();
@@ -650,7 +714,6 @@ namespace Sponcer_Csharp_System
                     chart1.Series[0].XValueMember = "Name";
                     chart1.Series[0].YValueMembers = "Total Students";
                     chart1.Series[0].ChartType = SeriesChartType.Pie;
-                    chart1.Titles.Add("Sponcer's with Total students sponcered.");
                     chart1.Series[0].IsValueShownAsLabel = true;
                     sqlData.Dispose();
                     connection.Close();
@@ -662,6 +725,8 @@ namespace Sponcer_Csharp_System
             }
         }
 
+        internal static string uid;
+
         private void Dashboard_Load(object sender, EventArgs e)
         {
             cntspncr();
@@ -671,8 +736,9 @@ namespace Sponcer_Csharp_System
             cntcol();
             cntsec();
             timer1.Start();
-            User.usnm = usnmtxt.Text;
-            nmlbl.Text = File.ReadLines("./Companyinfo.txt").First();
+            Login.usnm = usnmtxt.Text;
+            Login.id = uid;
+            nmlbl.Text = File.ReadLines("./Companyinfo.txt").FirstOrDefault();
             string path = File.ReadLines("./Companyinfo.txt").ElementAtOrDefault(4);
             Image img = System.Drawing.Image.FromFile(path);
             logo.Image = img;
@@ -779,15 +845,6 @@ namespace Sponcer_Csharp_System
             user.usnmtxt.Text = usnmtxt.Text;
             user.passtxt.Text = passlbl.Text;
             user.Show();
-        }
-
-        private void gunaButton1_Click_1(object sender, EventArgs e)
-        {
-            DialogResult res = MessageBox.Show("Are you sure that you want logout.", "Note", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
-            {
-                Application.Restart();
-            }
         }
 
         private void nextbtn_Click(object sender, EventArgs e)
@@ -949,6 +1006,33 @@ namespace Sponcer_Csharp_System
             catch (Exception er)
             {
                 MessageBox.Show(er.Message);
+            }
+        }
+
+        private void gunaButton4_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Are you sure that you want logout.", "Note", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                try
+                {
+                    if (connection.State == ConnectionState.Closed)
+                    {
+                        connection.Open();
+                        string insert = "insert into activities values(@id, @act, @tm, getdate());";
+                        com = new SqlCommand(insert, connection);
+                        com.Parameters.Add(new SqlParameter("@id", uid));
+                        com.Parameters.Add(new SqlParameter("@act", "Logged-out"));
+                        com.Parameters.Add(new SqlParameter("@tm", DateTime.Now.ToString("HH:mm:ss")));
+                        com.ExecuteNonQuery();
+                        connection.Close();
+                        Application.Restart(); 
+                    }
+                }
+                catch (Exception er)
+                {
+                    MessageBox.Show(er.Message);
+                }
             }
         }
     }

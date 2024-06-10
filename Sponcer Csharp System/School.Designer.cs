@@ -338,6 +338,7 @@
             this.Controls.Add(this.Updatebtn);
             this.Name = "School";
             this.Size = new System.Drawing.Size(452, 590);
+            this.Load += new System.EventHandler(this.School_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -53,6 +53,12 @@ namespace Sponcer_Csharp_System
                         var res = com.ExecuteNonQuery();
                         if (res > 0)
                         {
+                            insert = "insert into activities values(@id, @act, @tm, getdate());";
+                            com = new SqlCommand(insert, connection);
+                            com.Parameters.Add(new SqlParameter("@id", uid));
+                            com.Parameters.Add(new SqlParameter("@act", "Created a student."));
+                            com.Parameters.Add(new SqlParameter("@tm", DateTime.Now.ToString("HH:mm:ss")));
+                            com.ExecuteNonQuery();
                             Hide();
                             Parent.Hide();
                             MessageBox.Show("Student Created Successfully!! Please Refresh the grid.");
@@ -91,6 +97,12 @@ namespace Sponcer_Csharp_System
                     var res = com.ExecuteNonQuery();
                     if (res > 0)
                     {
+                        string insert = "insert into activities values(@id, @act, @tm, getdate());";
+                        com = new SqlCommand(insert, connection);
+                        com.Parameters.Add(new SqlParameter("@id", uid));
+                        com.Parameters.Add(new SqlParameter("@act", "Updated a student."));
+                        com.Parameters.Add(new SqlParameter("@tm", DateTime.Now.ToString("HH:mm:ss")));
+                        com.ExecuteNonQuery();
                         MessageBox.Show("Student Updated Successfully!! Please Refresh the grid.");
                     }
                     else
@@ -189,12 +201,15 @@ namespace Sponcer_Csharp_System
 
         private void Student_Load(object sender, EventArgs e)
         {
+            Dashboard.uid = uid;
+            MessageBox.Show(uid);
             school();
             sponcer();
         }
 
         string scid;
 
+        internal static string uid;
         private void schcmb_onItemSelected(object sender, EventArgs e)
         {
             try

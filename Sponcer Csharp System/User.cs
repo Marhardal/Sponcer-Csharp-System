@@ -131,5 +131,30 @@ namespace Sponcer_Csharp_System
                 MessageBox.Show(er.Message);
             }
         }
+
+        private void passtxt_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usnmtxt_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

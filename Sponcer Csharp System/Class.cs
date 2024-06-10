@@ -22,8 +22,10 @@ namespace Sponcer_Csharp_System
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ToString());
         SqlCommand com = new SqlCommand();
 
+        internal static string uid;
         private void Class_Load(object sender, EventArgs e)
         {
+            Dashboard.uid=uid;
             try
             {
                 if (connection.State == ConnectionState.Closed)
@@ -86,6 +88,12 @@ namespace Sponcer_Csharp_System
                             var res = com.ExecuteNonQuery();
                             if (res != 0)
                             {
+                                insert = "insert into activities values(@id, @act, @tm, getdate());";
+                                com = new SqlCommand(insert, connection);
+                                com.Parameters.Add(new SqlParameter("@id", uid));
+                                com.Parameters.Add(new SqlParameter("@act", "User Logged-in"));
+                                com.Parameters.Add(new SqlParameter("@tm", DateTime.Now.ToString("HH:mm:ss")));
+                                com.ExecuteNonQuery();
                                 Hide();
                                 Parent.Hide();
                                 MessageBox.Show("Class created successfully!! Please refresh the grid.");
@@ -132,6 +140,12 @@ namespace Sponcer_Csharp_System
                         var res = com.ExecuteNonQuery();
                         if (res != 0)
                         {
+                            string insert = "insert into activities values(@id, @act, @tm, getdate());";
+                            com = new SqlCommand(insert, connection);
+                            com.Parameters.Add(new SqlParameter("@id", uid));
+                            com.Parameters.Add(new SqlParameter("@act", "User Logged-in"));
+                            com.Parameters.Add(new SqlParameter("@tm", DateTime.Now.ToString("HH:mm:ss")));
+                            com.ExecuteNonQuery();
                             Hide();
                             Parent.Hide();
                             MessageBox.Show("Class updated Successfully!! Please refresh the grid to continue.");
